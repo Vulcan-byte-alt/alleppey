@@ -1,0 +1,1673 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alleppey Backwaters | Homestay & Houseboat Experience</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'neon-green': '#00ff88',
+                        'dark-green': '#10b981',
+                        'electric-green': '#22c55e',
+                        'deep-black': '#0a0a0a',
+                        'soft-black': '#1a1a1a',
+                        'light-gray': '#f8fafc',
+                        'border-gray': '#2a2a2a',
+                        'glass-white': 'rgba(255, 255, 255, 0.1)',
+                        'glass-green': 'rgba(0, 255, 136, 0.1)',
+                        'glass-dark': 'rgba(26, 26, 26, 0.8)'
+                    },
+                    fontFamily: {
+                        'sans': ['Source Sans Pro', 'system-ui', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif'],
+                        'display': ['Playfair Display', 'serif']
+                    },
+                    backdropBlur: {
+                        'xs': '2px',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Source+Sans+Pro:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+         /* Headings with elegant serif font */
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+    }
+
+    /* Specific heading styles */
+    h1 {
+        font-weight: 800;
+        letter-spacing: 0.005em;
+    }
+
+    h2 {
+        font-weight: 700;
+        letter-spacing: 0.01em;
+    }
+
+    h3 {
+        font-weight: 600;
+        letter-spacing: 0.015em;
+    }
+
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background: #0a0a0a;
+            color: white;
+        }
+
+        /* Navigation and buttons keep clean sans-serif */
+        .navbar-logo,
+        .navbar-link,
+        .navbar-cta,
+        .btn-primary,
+        .btn-outline {
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+        /* Logo gets special treatment */
+        .navbar-logo {
+            font-family: 'Playfair Display', serif;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        /* Tree Silhouettes */
+        .hero-trees {
+            background-image:
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20'%3E%3Cpath d='M5,20 Q5,15 8,15 Q11,15 11,20 M15,20 Q15,10 20,10 Q25,10 25,20 M35,20 Q35,12 40,12 Q45,12 45,20 M60,20 Q60,8 67,8 Q74,8 74,20 M85,20 Q85,14 90,14 Q95,14 95,20' fill='none' stroke='%2300ff88' stroke-width='0.8' opacity='0.3'/%3E%3C/svg%3E"),
+                radial-gradient(circle at 15% 80%, rgba(0, 255, 136, 0.15) 0%, transparent 30%),
+                radial-gradient(circle at 85% 85%, rgba(34, 197, 94, 0.1) 0%, transparent 30%),
+                linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            background-size: 300px 60px, 100% 100%, 100% 100%, 100% 100%;
+            background-position: 0 bottom, 0 0, 0 0, 0 0;
+            background-repeat: repeat-x, no-repeat, no-repeat, no-repeat;
+        }
+
+        /* Falling Leaves Animation */
+        .leaves-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .leaf {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(45deg, #22c55e, #00ff88);
+            border-radius: 0 100% 0 100%;
+            opacity: 0.2;
+            animation: fall linear infinite;
+        }
+
+        .leaf:nth-child(1) {
+            left: 10%;
+            animation-duration: 6s;
+            animation-delay: 0s;
+        }
+
+        .leaf:nth-child(2) {
+            left: 30%;
+            animation-duration: 7s;
+            animation-delay: 1s;
+        }
+
+        .leaf:nth-child(3) {
+            left: 50%;
+            animation-duration: 8s;
+            animation-delay: 2s;
+        }
+
+        .leaf:nth-child(4) {
+            left: 70%;
+            animation-duration: 6.5s;
+            animation-delay: 0.5s;
+        }
+
+        .leaf:nth-child(5) {
+            left: 85%;
+            animation-duration: 7.5s;
+            animation-delay: 1.5s;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100vh) rotate(0deg);
+                opacity: 0.2;
+            }
+
+            10% {
+                opacity: 0.4;
+            }
+
+            90% {
+                opacity: 0.1;
+            }
+
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Glass Morphism */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .glass-card-white {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(0, 255, 136, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 255, 136, 0.1), 0 0 20px rgba(0, 255, 136, 0.05);
+        }
+
+        .glass-card-green {
+            background: rgba(0, 255, 136, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+        }
+
+        .glow-effect {
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+        }
+
+        .floating {
+            animation: floating 4s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        .card-modern {
+            background: rgba(26, 26, 26, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s ease;
+        }
+
+        .card-modern:hover {
+            transform: translateY(-8px);
+            border-color: rgba(0, 255, 136, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 255, 136, 0.1);
+        }
+
+        /* Enhanced Navigation - SuperHub Style */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 2rem;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .navbar.scrolled {
+            padding: 1rem 2rem;
+        }
+
+        .navbar.scrolled .navbar-container {
+            background: rgba(10, 10, 10, 0.9);
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border-radius: 100px;
+            padding: 0.75rem 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            transition: all 0.4s ease;
+        }
+
+        .navbar-logo {
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .navbar-menu {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .navbar-link {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+            position: relative;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+        }
+
+        .navbar-link:hover {
+            color: #00ff88;
+            background: rgba(0, 255, 136, 0.05);
+            transform: translateY(-1px);
+        }
+
+        .navbar-link.active {
+            color: #00ff88;
+        }
+
+        .navbar-cta {
+            background: linear-gradient(135deg, #00ff88, #22c55e);
+            color: #0a0a0a;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .navbar-cta:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 8px 25px rgba(0, 255, 136, 0.3);
+        }
+
+        .navbar-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .navbar-cta:hover::before {
+            left: 100%;
+        }
+
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 136, 0.5), transparent);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #00ff88, #22c55e);
+            border: none;
+            transition: all 0.3s ease;
+            color: #0a0a0a;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #00ff88;
+            color: #00ff88;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline:hover {
+            background: #00ff88;
+            color: #0a0a0a;
+            transform: translateY(-2px);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #00ff88, #22c55e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Masonry Gallery */
+        .masonry-grid {
+            column-count: 4;
+            column-gap: 1rem;
+        }
+
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 1rem;
+            border-radius: 1rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .masonry-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.2);
+        }
+
+        @media (max-width: 1024px) {
+            .masonry-grid {
+                column-count: 3;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .masonry-grid {
+                column-count: 2;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .masonry-grid {
+                column-count: 1;
+            }
+        }
+
+        /* Enhanced Testimonial Cards - Dark Theme */
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(25px);
+            border: 2px solid rgba(0, 255, 136, 0.1);
+            transition: all 0.4s ease;
+            color: white;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(0, 255, 136, 0.3);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 40px rgba(0, 255, 136, 0.1);
+        }
+
+        /* 3D Effects */
+        .card-3d {
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+
+        .card-3d:hover {
+            transform: rotateY(8deg) rotateX(4deg);
+        }
+
+        /* Enhanced Pricing Cards */
+        .pricing-card {
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s ease;
+            color: white;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3), 0 0 30px rgba(0, 255, 136, 0.2);
+            border-color: rgba(0, 255, 136, 0.3);
+        }
+
+        .pricing-popular {
+            background: rgba(0, 255, 136, 0.15);
+            border: 2px solid rgba(0, 255, 136, 0.4);
+            position: relative;
+            color: white;
+        }
+
+        .pricing-popular::before {
+            content: "Most Popular";
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #00ff88, #22c55e);
+            color: black;
+            padding: 6px 20px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        /* Enhanced Multi-color Background - Sophisticated White Theme */
+        .multi-bg {
+            background: linear-gradient(135deg, #fafafa 0%, #f8f9fa 30%, #ffffff 60%, #f5f7fa 100%);
+            position: relative;
+        }
+
+        .multi-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 25% 25%, rgba(0, 255, 136, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(34, 197, 94, 0.02) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.015) 0%, transparent 70%);
+            z-index: 0;
+        }
+
+        .multi-bg>* {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Enhanced Form Styling - Dark Theme */
+        .form-enhanced {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(25px);
+            border: 2px solid rgba(0, 255, 136, 0.1);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(0, 255, 136, 0.08);
+        }
+
+        .form-input {
+            background: rgba(255, 255, 255, 0.08);
+            border: 2px solid rgba(0, 255, 136, 0.1);
+            transition: all 0.3s ease;
+            color: white;
+        }
+
+        .form-input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .form-input:focus {
+            border-color: rgba(0, 255, 136, 0.4);
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        /* Enhanced Features Card - Dark Theme */
+        .feature-card {
+            background: rgba(255, 255, 255, 0.91);
+            backdrop-filter: blur(25px);
+            border: 2px solid rgba(0, 255, 136, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 255, 136, 0.05);
+            transition: all 0.4s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(0, 255, 136, 0.3);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 40px rgba(0, 255, 136, 0.1);
+        }
+
+        /* Mobile hamburger - SuperHub Style */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background: white;
+            border-radius: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+
+        /* Mobile menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-menu a {
+            color: white;
+            font-size: 2rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .mobile-menu a:hover {
+            color: #00ff88;
+        }
+
+        @media (max-width: 768px) {
+            .hero-text {
+                font-size: 2.5rem;
+            }
+
+            .card-3d:hover {
+                transform: none;
+            }
+
+            .navbar-menu,
+            .navbar-cta {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <div class="flex items-center">
+                <div
+                    class="w-8 h-8 bg-gradient-to-br from-neon-green to-electric-green rounded-lg flex items-center justify-center mr-3">
+                    <i class="fas fa-water text-black text-sm"></i>
+                </div>
+                <span class="navbar-logo">Alleppey Backwaters</span>
+            </div>
+            <div class="navbar-menu hidden md:block">
+                <div class="ml-10 flex items-baseline space-x-8">
+                    <a href="#home" class="navbar-link active">Home</a>
+                    <a href="#about" class="navbar-link">About</a>
+                    <a href="#services" class="navbar-link">Services</a>
+                    <a href="#plans" class="navbar-link">Plans</a>
+                    <a href="#testimonials" class="navbar-link">Reviews</a>
+                    <a href="#gallery" class="navbar-link">Gallery</a>
+                    <a href="#contact" class="navbar-link">Contact</a>
+                </div>
+            </div>
+            <button class="navbar-cta">Book Experience</button>
+            <div class="hamburger md:hidden" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#plans">Plans</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen hero-trees flex items-center relative overflow-hidden">
+        <!-- Falling Leaves Animation -->
+        <div class="leaves-container">
+            <div class="leaf"></div>
+            <div class="leaf"></div>
+            <div class="leaf"></div>
+            <div class="leaf"></div>
+            <div class="leaf"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+            <!-- Hero Text -->
+            <div class="text-center mb-12 mt-24">
+                <h1 class="hero-text text-6xl md:text-7xl font-black text-white mb-8 leading-tight">
+                    Experience the
+                    <span class="text-gradient">Backwaters</span>
+                    <br>of Alleppey
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto font-light leading-relaxed">
+                    Discover Kerala's pristine waterways through authentic homestay experiences and luxury houseboat
+                    cruises.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                    <button class="btn-primary px-8 py-4 rounded-xl text-lg font-semibold transform hover:scale-105">
+                        Book Your Experience
+                    </button>
+                    <button class="btn-outline px-8 py-4 rounded-xl text-lg font-semibold">
+                        Watch Our Story
+                    </button>
+                </div>
+            </div>
+
+            <!-- Hero Media Container -->
+            <div class="relative max-w-5xl mx-auto">
+                <div class="glass-card rounded-3xl p-6 glow-effect">
+                    <div class="aspect-video rounded-2xl overflow-hidden relative border border-white/10">
+                        <video class="w-full h-full object-cover" autoplay muted loop playsinline
+                            poster="https://images.unsplash.com/photo-1551599189-4bf24b03bb1e?w=1200&h=675&fit=crop&crop=center">
+                            <source src="hero.mp4" type="video/mp4">
+                            <source src="/path-to-your-video/alleppey-backwaters.webm" type="video/webm">
+                        </video>
+                    </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 multi-bg relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div>
+                    <div class="inline-block px-4 py-2 glass-card-green rounded-full mb-6">
+                        <span class="text-green-700 text-sm font-medium">OUR STORY</span>
+                    </div>
+                    <h2 class="text-5xl md:text-6xl font-black text-gray-900 mb-8">Kerala's
+                        Hidden Paradise</h2>
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed font-light">
+                        Nestled in the heart of Alleppey, our homestay represents the perfect
+                        fusion of Kerala's rich
+                        heritage and contemporary luxury. Wake up to misty mornings where water
+                        meets sky, surrounded by
+                        swaying coconut palms and the symphony of exotic birds.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-10 leading-relaxed font-light">
+                        From traditional Kathakali performances to cooking classes with our
+                        family, every moment is
+                        designed to immerse you in the rich tapestry of Kerala culture while
+                        enjoying modern amenities
+                        and personalized hospitality.
+                    </p>
+                    <div class="grid grid-cols-3 gap-8">
+                        <div class="text-center">
+                            <p class="text-4xl font-black text-neon-green mb-2">500+</p>
+                            <p class="text-gray-600 font-medium">Happy Guests</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-4xl font-black text-neon-green mb-2">5</p>
+                            <p class="text-gray-600 font-medium">Years Experience</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-4xl font-black text-neon-green mb-2">4.9</p>
+                            <p class="text-gray-600 font-medium">Average Rating</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="glass-card-white rounded-3xl overflow-hidden card-3d">
+                        <img src="https://images.unsplash.com/photo-1605358175102-b052ad8e8b52?w=600&h=600&fit=crop&crop=center"
+                            alt="Traditional Kerala Homestay" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-soft-black relative">
+        <!-- Falling Leaves -->
+        <div class="leaves-container">
+            <div class="leaf"></div>
+            <div class="leaf"></div>
+            <div class="leaf"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <div class="inline-block px-4 py-2 glass-card-green rounded-full mb-6">
+                    <span class="text-neon-green text-sm font-medium">LUXURY EXPERIENCES</span>
+                </div>
+                <h2 class="text-5xl md:text-6xl font-black text-white mb-8">Premium Services
+                </h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto font-light">Curated
+                    experiences that showcase the best
+                    of Kerala's natural beauty and cultural heritage</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Homestay Service -->
+                <div class="glass-card rounded-3xl p-10">
+                    <div class="aspect-video rounded-2xl mb-8 overflow-hidden border border-white/10">
+                        <img src="home.jpg" alt="Traditional Kerala Homestay Interior"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-3xl font-black text-white mb-6">Traditional Homestay
+                        Experience</h3>
+                    <p class="text-gray-400 mb-8 leading-relaxed font-light">
+                        Immerse yourself in authentic Kerala hospitality with our luxury
+                        homestay. Experience
+                        traditional architecture enhanced with modern amenities, gourmet local
+                        cuisine, and personalized
+                        service that makes you feel at home.
+                    </p>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center text-gray-300">
+                            <div class="w-2 h-2 bg-neon-green rounded-full mr-3"></div>
+                            <span>Premium traditional architecture</span>
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <div class="w-2 h-2 bg-neon-green rounded-full mr-3"></div>
+                            <span>Authentic Kerala cuisine experiences</span>
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <div class="w-2 h-2 bg-neon-green rounded-full mr-3"></div>
+                            <span>Cultural immersion programs</span>
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <div class="w-2 h-2 bg-neon-green rounded-full mr-3"></div>
+                            <span>24/7 personalized hospitality</span>
+                        </div>
+                    </div>
+                    <button class="btn-primary px-8 py-3 rounded-xl font-semibold hover:scale-105 transition-transform">
+                        Explore Homestay
+                    </button>
+                </div>
+
+                <!-- Houseboat Service -->
+                <div class="glass-card rounded-3xl p-10">
+                    <div class="aspect-video rounded-2xl mb-8 overflow-hidden border border-white/10">
+                        <img src="houseboat.jpg" alt="Luxury Houseboat in Kerala Backwaters"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-3xl font-black text-white mb-6">Backwater Luxury Cruise</h3>
+                    <p class="text-gray-400 mb-8 leading-relaxed font-light">
+                        Navigate Kerala's pristine backwaters aboard our luxury houseboats.
+                        Experience the tranquil
+                        waterways with premium accommodations, gourmet dining, and expert local
+                        guides who bring the
+                        region's stories to life.
+                    </p>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center text-gray-300">
+                            <div class="w-2 h-2 bg-neon-green rounded-full mr-3"></div>
+                            <span>Traditional luxury houseboats</span>
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <div class="w-2 h-2 bg-neon-green rounded-full mr-3"></div>
+                            <span>Expert crew and local guides</span>
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <div class="w-2 h-2 bg-neon-green rounded-full mr-3"></div>
+                            <span>Fresh seafood and gourmet dining</span>
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <div class="w-2 h-2 bg-neon-green rounded-full mr-3"></div>
+                            <span>Sunset and sunrise experiences</span>
+                        </div>
+                    </div>
+                    <button class="btn-outline px-8 py-3 rounded-xl font-semibold hover:scale-105 transition-transform">
+                        Explore Houseboats
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-20 multi-bg relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <div class="inline-block px-4 py-2 glass-card-green rounded-full mb-6">
+                    <span class="text-green-700 text-sm font-medium">PREMIUM AMENITIES</span>
+                </div>
+                <h2 class="text-5xl md:text-6xl font-black text-black mb-8">Why Choose Us</h2>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto font-light">Experience luxury
+                    redefined with our
+                    comprehensive range of world-class amenities and services</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="feature-card rounded-2xl p-8 card-3d">
+                    <div
+                        class="w-16 h-16 bg-neon-green/15 rounded-2xl flex items-center justify-center mb-6 border-2 border-neon-green/30">
+                        <i class="fas fa-wifi text-2xl text-green-700"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-4">High-Speed WiFi</h3>
+                    <p class="text-gray-700 leading-relaxed">Lightning-fast internet
+                        connectivity throughout the
+                        property for seamless communication and sharing your Kerala memories.
+                    </p>
+                </div>
+
+                <div class="feature-card rounded-2xl p-8 card-3d">
+                    <div
+                        class="w-16 h-16 bg-neon-green/15 rounded-2xl flex items-center justify-center mb-6 border-2 border-neon-green/30">
+                        <i class="fas fa-car text-2xl text-green-700"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-4">Secure Parking</h3>
+                    <p class="text-gray-700 leading-relaxed">Complimentary secure parking with
+                        24/7 surveillance and
+                        professional valet service for your complete peace of mind.</p>
+                </div>
+
+                <div class="feature-card rounded-2xl p-8 card-3d">
+                    <div
+                        class="w-16 h-16 bg-neon-green/15 rounded-2xl flex items-center justify-center mb-6 border-2 border-neon-green/30">
+                        <i class="fas fa-snowflake text-2xl text-green-700"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-4">Climate Control</h3>
+                    <p class="text-gray-700 leading-relaxed">Smart air conditioning systems and
+                        natural ventilation
+                        options designed for optimal comfort in any weather.</p>
+                </div>
+
+                <div class="feature-card rounded-2xl p-8 card-3d">
+                    <div
+                        class="w-16 h-16 bg-neon-green/15 rounded-2xl flex items-center justify-center mb-6 border-2 border-neon-green/30">
+                        <i class="fas fa-utensils text-2xl text-green-700"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-4">Authentic Cuisine</h3>
+                    <p class="text-gray-700 leading-relaxed">Farm-to-table dining experiences
+                        featuring traditional
+                        Kerala dishes prepared with organic, locally sourced ingredients.</p>
+                </div>
+
+                <div class="feature-card rounded-2xl p-8 card-3d">
+                    <div
+                        class="w-16 h-16 bg-neon-green/15 rounded-2xl flex items-center justify-center mb-6 border-2 border-neon-green/30">
+                        <i class="fas fa-bus text-2xl text-green-700"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-4">Premium Transfers</h3>
+                    <p class="text-gray-700 leading-relaxed">Luxury transportation services from
+                        airports and railway
+                        stations with professional drivers and comfortable vehicles.</p>
+                </div>
+
+                <div class="feature-card rounded-2xl p-8 card-3d">
+                    <div
+                        class="w-16 h-16 bg-neon-green/15 rounded-2xl flex items-center justify-center mb-6 border-2 border-neon-green/30">
+                        <i class="fas fa-ship text-2xl text-green-700"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-4">Luxury Houseboats</h3>
+                    <p class="text-gray-700 leading-relaxed">Traditional Kerala houseboats
+                        equipped with modern
+                        amenities for an unforgettable backwater journey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plans Section -->
+    <section id="plans" class="py-20 bg-deep-black relative">
+        <!-- Falling Leaves -->
+        <div class="leaves-container">
+            <div class="leaf"></div>
+            <div class="leaf"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <div class="inline-block px-4 py-2 glass-card-green rounded-full mb-6">
+                    <span class="text-neon-green text-sm font-medium">EXPERIENCE PACKAGES</span>
+                </div>
+                <h2 class="text-5xl md:text-6xl font-black text-white mb-8">Choose Your Journey
+                </h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto font-light">Carefully crafted
+                    packages designed to
+                    suit every traveler's preferences and budget</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Room Only Plan -->
+                <div class="pricing-card rounded-3xl p-8 card-3d">
+                    <div class="text-center mb-8">
+                        <div
+                            class="w-16 h-16 bg-neon-green/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-home text-2xl text-neon-green"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2 text-white">Homestay Experience</h3>
+                        <p class="text-gray-400">Perfect for cultural immersion</p>
+                    </div>
+                    <div class="text-center mb-6">
+                        <span class="text-4xl font-black text-neon-green">₹2,500</span>
+                        <span class="text-gray-400">/night</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-gray-300">
+                            <div class="w-2 h-2 bg-neon-green rounded-full mr-3"></div>Premium
+                            AC/Non-AC rooms
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <div class="w-2 h-2 bg-neon-green rounded-full mr-3"></div>Authentic
+                            Kerala breakfast
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <div class="w-2 h-2 bg-neon-green rounded-full mr-3"></div>Cultural
+                            activities and tours
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <div class="w-2 h-2 bg-neon-green rounded-full mr-3"></div>Free WiFi
+                            and parking
+                        </li>
+                    </ul>
+                    <button
+                        class="w-full btn-outline border-2 border-neon-green text-neon-green px-6 py-3 rounded-xl font-semibold">
+                        Book Homestay
+                    </button>
+                </div>
+
+                <!-- Combo Plan - Most Popular -->
+                <div class="pricing-card pricing-popular rounded-3xl p-8 card-3d">
+                    <div class="text-center mb-8">
+                        <div
+                            class="w-16 h-16 bg-neon-green/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-star text-2xl text-neon-green"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2 text-white">Complete Experience</h3>
+                        <p class="text-gray-300">Best value for comprehensive stay</p>
+                    </div>
+                    <div class="text-center mb-6">
+                        <span class="text-4xl font-black text-neon-green">₹4,500</span>
+                        <span class="text-gray-300">/night</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-gray-300">
+                            <div class="w-2 h-2 bg-neon-green rounded-full mr-3"></div>Homestay
+                            accommodation
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <div class="w-2 h-2 bg-neon-green rounded-full mr-3"></div>Half-day
+                            houseboat cruise
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <div class="w-2 h-2 bg-neon-green rounded-full mr-3"></div>All meals
+                            included
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <div class="w-2 h-2 bg-neon-green rounded-full mr-3"></div>Airport
+                            transfers
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <div class="w-2 h-2 bg-neon-green rounded-full mr-3"></div>Cultural
+                            programs
+                        </li>
+                    </ul>
+                    <button class="w-full btn-primary px-6 py-3 rounded-xl font-semibold">
+                        Book Complete Package
+                    </button>
+                </div>
+
+                <!-- Houseboat Only Plan -->
+                <div class="pricing-card rounded-3xl p-8 card-3d">
+                    <div class="text-center mb-8">
+                        <div
+                            class="w-16 h-16 bg-neon-green/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-ship text-2xl text-neon-green"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2 text-white">Houseboat Journey</h3>
+                        <p class="text-gray-400">Pure backwater experience</p>
+                    </div>
+                    <div class="text-center mb-6">
+                        <span class="text-4xl font-black text-neon-green">₹6,000</span>
+                        <span class="text-gray-400">/day</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-gray-300">
+                            <div class="w-2 h-2 bg-neon-green rounded-full mr-3"></div>Luxury
+                            houseboat accommodation
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <div class="w-2 h-2 bg-neon-green rounded-full mr-3"></div>
+                            Professional crew and guide
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <div class="w-2 h-2 bg-neon-green rounded-full mr-3"></div>Fresh
+                            seafood and local cuisine
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <div class="w-2 h-2 bg-neon-green rounded-full mr-3"></div>Sunset
+                            cruise included
+                        </li>
+                    </ul>
+                    <button
+                        class="w-full btn-outline border-2 border-neon-green text-neon-green px-6 py-3 rounded-xl font-semibold">
+                        Book Houseboat
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 multi-bg relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <div class="inline-block px-4 py-2 glass-card-green rounded-full mb-6">
+                    <span class="text-green-700 text-sm font-medium">GUEST STORIES</span>
+                </div>
+                <h2 class="text-5xl md:text-6xl font-black text-black mb-8">What Our Guests Say
+                </h2>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto font-light">Real experiences
+                    from travelers who
+                    discovered the magic of Kerala with us</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card rounded-3xl p-8 card-3d">
+                    <div class="flex items-center mb-6">
+                        <div class="flex text-green-700">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6 leading-relaxed italic">
+                        "An absolutely magical experience! The homestay felt like staying with
+                        family, and the houseboat
+                        journey through the backwaters was breathtaking. Every detail was
+                        perfectly arranged."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4 border-2 border-neon-green/30">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b5bc?w=100&h=100&fit=crop&crop=face"
+                                alt="Sarah Johnson" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-black">Sarah Johnson</h4>
+                            <p class="text-gray-600 text-sm">Travel Blogger, UK</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card rounded-3xl p-8 card-3d">
+                    <div class="flex items-center mb-6">
+                        <div class="flex text-green-700">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6 leading-relaxed italic">
+                        "The cultural immersion was incredible. Learning to cook traditional
+                        Kerala dishes and watching
+                        Kathakali performances made this trip unforgettable. Highly recommend!"
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4 border-2 border-neon-green/30">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face"
+                                alt="Rajesh Patel" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-black">Rajesh Patel</h4>
+                            <p class="text-gray-600 text-sm">Photographer, Mumbai</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card rounded-3xl p-8 card-3d">
+                    <div class="flex items-center mb-6">
+                        <div class="flex text-green-700">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6 leading-relaxed italic">
+                        "Perfect blend of luxury and authenticity. The sunrise from our
+                        houseboat was magical, and the
+                        hospitality exceeded all expectations. We'll definitely return!"
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4 border-2 border-neon-green/30">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=face"
+                                alt="Emma Chen" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-black">Emma & David Chen</h4>
+                            <p class="text-gray-600 text-sm">Honeymooners, Australia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-deep-black relative">
+        <!-- Falling Leaves -->
+        <div class="leaves-container">
+            <div class="leaf"></div>
+            <div class="leaf"></div>
+            <div class="leaf"></div>
+        </div>
+
+        <div class="section-divider mb-20"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <div class="inline-block px-4 py-2 glass-card-green rounded-full mb-6">
+                    <span class="text-neon-green text-sm font-medium">VISUAL JOURNEY</span>
+                </div>
+                <h2 class="text-5xl md:text-6xl font-black text-white mb-8">Gallery</h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto font-light">Discover the
+                    beauty that awaits you in
+                    Kerala's backwaters</p>
+            </div>
+
+            <!-- Enhanced Masonry Gallery -->
+            <div class="masonry-grid">
+                <!-- Featured Backwaters View -->
+                <div class="masonry-item h-96 rounded-xl overflow-hidden group relative">
+                    <img src="https://images.unsplash.com/photo-1551599189-4bf24b03bb1e?w=500&h=384&fit=crop&crop=center"
+                        alt="Kerala Backwaters Panoramic View"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h4 class="font-bold text-lg">Pristine Backwaters</h4>
+                            <p class="text-sm opacity-90">Where serenity meets nature</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Luxury Houseboat -->
+                <div class="masonry-item h-80 rounded-xl overflow-hidden group relative">
+                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500&h=320&fit=crop&crop=center"
+                        alt="Traditional Kerala Houseboat"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h4 class="font-bold text-lg">Luxury Houseboats</h4>
+                            <p class="text-sm opacity-90">Traditional comfort redefined</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Premium Homestay -->
+                <div class="masonry-item h-72 rounded-xl overflow-hidden group relative">
+                    <img src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?w=500&h=288&fit=crop&crop=center"
+                        alt="Traditional Kerala Homestay Room"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h4 class="font-bold text-lg">Heritage Homestay</h4>
+                            <p class="text-sm opacity-90">Authentic Kerala architecture</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sunset Experience -->
+                <div class="masonry-item h-64 rounded-xl overflow-hidden group relative">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=256&fit=crop&crop=center"
+                        alt="Magnificent Kerala Sunset"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h4 class="font-bold text-lg">Golden Sunsets</h4>
+                            <p class="text-sm opacity-90">Magical evening moments</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Authentic Cuisine -->
+                <div class="masonry-item h-68 rounded-xl overflow-hidden group relative">
+                    <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?w=500&h=272&fit=crop&crop=center"
+                        alt="Traditional Kerala Cuisine"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h4 class="font-bold text-lg">Authentic Flavors</h4>
+                            <p class="text-sm opacity-90">Farm-to-table experiences</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cultural Heritage -->
+                <div class="masonry-item h-76 rounded-xl overflow-hidden group relative">
+                    <img src="https://images.unsplash.com/photo-1578895101408-1a36b834405b?w=500&h=304&fit=crop&crop=center"
+                        alt="Traditional Kathakali Performance"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h4 class="font-bold text-lg">Cultural Shows</h4>
+                            <p class="text-sm opacity-90">Living traditions</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wellness & Spa -->
+                <div class="masonry-item h-60 rounded-xl overflow-hidden group relative">
+                    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=500&h=240&fit=crop&crop=center"
+                        alt="Ayurvedic Spa Experience"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h4 class="font-bold text-lg">Ayurvedic Wellness</h4>
+                            <p class="text-sm opacity-90">Rejuvenate your soul</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Village Life -->
+                <div class="masonry-item h-84 rounded-xl overflow-hidden group relative">
+                    <img src="https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=500&h=336&fit=crop&crop=center"
+                        alt="Village Life Experience"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h4 class="font-bold text-lg">Village Discovery</h4>
+                            <p class="text-sm opacity-90">Connect with local life</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <button class="btn-primary px-8 py-3 rounded-xl font-semibold hover:scale-105 transition-transform">
+                    View Full Gallery
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 multi-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <div class="inline-block px-4 py-2 glass-card-green rounded-full mb-6">
+                    <span class="text-green-700 text-sm font-medium">GET IN TOUCH</span>
+                </div>
+                <h2 class="text-5xl md:text-6xl font-black text-black mb-8">Plan Your Escape
+                </h2>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto font-light">Ready for the
+                    adventure of a lifetime? Let
+                    us create your perfect Kerala experience</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+                <!-- Contact Form -->
+                <div class="form-enhanced rounded-3xl p-10 card-3d">
+                    <h3 class="text-2xl font-bold text-black mb-8">Send us a Message</h3>
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-3">Full
+                                Name</label>
+                            <input type="text"
+                                class="form-input text-black w-full px-6 py-4 rounded-xl focus:outline-none transition duration-300"
+                                placeholder="Enter your name">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-3">Email
+                                Address</label>
+                            <input type="email"
+                                class="form-input text-black w-full px-6 py-4 rounded-xl focus:outline-none transition duration-300"
+                                placeholder="Enter your email">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-3">Phone
+                                Number</label>
+                            <input type="tel"
+                                class="form-input text-black w-full px-6 py-4 rounded-xl focus:outline-none transition duration-300"
+                                placeholder="Enter your phone">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-3">Your
+                                Message</label>
+                            <textarea rows="4"
+                                class="form-input text-black w-full px-6 py-4 rounded-xl focus:outline-none transition duration-300"
+                                placeholder="Tell us about your Kerala dreams..."></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full btn-primary py-4 rounded-xl font-semibold hover:scale-105 transition-transform">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div>
+                    <h3 class="text-2xl font-bold text-black mb-8">Contact Information</h3>
+                    <div class="space-y-8">
+                        <div class="flex items-start space-x-6">
+                            <div
+                                class="w-14 h-14 bg-neon-green/15 rounded-2xl flex items-center justify-center flex-shrink-0 border-2 border-neon-green/30">
+                                <i class="fas fa-map-marker-alt text-green-700 text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-black text-lg mb-2">Location</h4>
+                                <p class="text-gray-700 leading-relaxed">Alleppey Backwaters,
+                                    Kerala<br>God's Own
+                                    Country, India</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-6">
+                            <div
+                                class="w-14 h-14 bg-neon-green/15 rounded-2xl flex items-center justify-center flex-shrink-0 border-2 border-neon-green/30">
+                                <i class="fas fa-phone text-green-700 text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-black text-lg mb-2">Phone</h4>
+                                <p class="text-gray-700 leading-relaxed">+91 XXXXX XXXXX<br>+91
+                                    XXXXX XXXXX</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-6">
+                            <div
+                                class="w-14 h-14 bg-neon-green/15 rounded-2xl flex items-center justify-center flex-shrink-0 border-2 border-neon-green/30">
+                                <i class="fas fa-envelope text-green-700 text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-black text-lg mb-2">Email</h4>
+                                <p class="text-gray-700 leading-relaxed">
+                                    info@alleppeystay.com<br>bookings@alleppeystay.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-6">
+                            <div
+                                class="w-14 h-14 bg-neon-green/15 rounded-2xl flex items-center justify-center flex-shrink-0 border-2 border-neon-green/30">
+                                <i class="fas fa-clock text-green-700 text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-black text-lg mb-2">Availability</h4>
+                                <p class="text-gray-700 leading-relaxed">24/7 Support
+                                    Available<br>Check-in: 2:00 PM |
+                                    Check-out: 11:00 AM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="mt-12">
+                        <h4 class="font-bold text-black text-lg mb-6">Follow Our Journey</h4>
+                        <div class="flex space-x-4">
+                            <a href="#"
+                                class="w-12 h-12 bg-blue-600 text-white rounded-xl flex items-center justify-center hover:bg-blue-700 transition duration-300 hover:scale-110">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#"
+                                class="w-12 h-12 bg-pink-600 text-white rounded-xl flex items-center justify-center hover:bg-pink-700 transition duration-300 hover:scale-110">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#"
+                                class="w-12 h-12 bg-green-600 text-white rounded-xl flex items-center justify-center hover:bg-green-700 transition duration-300 hover:scale-110">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="#"
+                                class="w-12 h-12 bg-red-600 text-white rounded-xl flex items-center justify-center hover:bg-red-700 transition duration-300 hover:scale-110">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-deep-black text-white py-16 border-t border-border-gray relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <div
+                            class="w-10 h-10 bg-gradient-to-br from-neon-green to-electric-green rounded-lg flex items-center justify-center mr-3">
+                            <i class="fas fa-water text-black"></i>
+                        </div>
+                        <span class="text-2xl font-bold">Alleppey Backwaters</span>
+                    </div>
+                    <p class="text-gray-400 mb-8 max-w-md leading-relaxed font-light">
+                        Creating magical memories in Kerala's pristine backwaters. Where every
+                        sunrise brings new
+                        adventures and every sunset paints unforgettable moments.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-neon-green transition duration-300 text-lg">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-neon-green transition duration-300 text-lg">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-neon-green transition duration-300 text-lg">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-neon-green transition duration-300 text-lg">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 text-lg">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home"
+                                class="text-gray-400 hover:text-neon-green transition duration-300 font-light">Home</a>
+                        </li>
+                        <li><a href="#about"
+                                class="text-gray-400 hover:text-neon-green transition duration-300 font-light">About</a>
+                        </li>
+                        <li><a href="#services"
+                                class="text-gray-400 hover:text-neon-green transition duration-300 font-light">Services</a>
+                        </li>
+                        <li><a href="#plans"
+                                class="text-gray-400 hover:text-neon-green transition duration-300 font-light">Plans</a>
+                        </li>
+                        <li><a href="#contact"
+                                class="text-gray-400 hover:text-neon-green transition duration-300 font-light">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 text-lg">Experiences</h4>
+                    <ul class="space-y-3">
+                        <li><span class="text-gray-400 font-light">Luxury Homestay</span></li>
+                        <li><span class="text-gray-400 font-light">Premium Houseboats</span>
+                        </li>
+                        <li><span class="text-gray-400 font-light">Cultural Tours</span></li>
+                        <li><span class="text-gray-400 font-light">Cooking Classes</span></li>
+                        <li><span class="text-gray-400 font-light">Sunrise Cruises</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section-divider my-12"></div>
+            <div class="text-center text-gray-400 font-light">
+                <p>&copy; 2025 Alleppey Backwaters. All rights reserved. Proudly serving
+                    travelers from around the
+                    world.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Navbar scroll effect - SuperHub Style
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+
+                // Close mobile menu if open
+                if (mobileMenu.classList.contains('active')) {
+                    hamburger.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Thank you for your message! Our team will contact you within 24 hours to plan your perfect Kerala experience.');
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function (entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards for animation
+        document.querySelectorAll('.card-modern, .glass-card-white, .pricing-card, .masonry-item, .testimonial-card, .feature-card, .form-enhanced').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            observer.observe(card);
+        });
+
+        // Random leaf generation for more dynamic animation
+        function createRandomLeaf() {
+            const leaf = document.createElement('div');
+            leaf.className = 'leaf';
+            leaf.style.left = Math.random() * 100 + '%';
+            leaf.style.animationDuration = (Math.random() * 3 + 5) + 's';
+            leaf.style.animationDelay = Math.random() * 1 + 's';
+
+            const containers = document.querySelectorAll('.leaves-container');
+            if (containers.length > 0) {
+                const randomContainer = containers[Math.floor(Math.random() * containers.length)];
+                randomContainer.appendChild(leaf);
+
+                // Remove leaf after animation
+                setTimeout(() => {
+                    if (leaf.parentNode) {
+                        leaf.parentNode.removeChild(leaf);
+                    }
+                }, 10000);
+            }
+        }
+
+        // Generate random leaves periodically
+        setInterval(createRandomLeaf, 2000);
+
+        // Active navigation link tracking
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.navbar-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Keyboard navigation support
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        console.log('🏝️ Alleppey Backwaters website loaded successfully with enhanced styling!');
+    </script>
+</body>
+
+</html>

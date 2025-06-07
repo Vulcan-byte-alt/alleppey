@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Houseboat Gallery | Alleppey Backwaters</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'neon-green': '#00ff88',
+                        'dark-green': '#10b981',
+                        'electric-green': '#22c55e',
+                        'deep-black': '#0a0a0a',
+                        'soft-black': '#1a1a1a',
+                        'light-gray': '#f8fafc',
+                        'border-gray': '#2a2a2a',
+                        'glass-white': 'rgba(255, 255, 255, 0.1)',
+                        'glass-green': 'rgba(0, 255, 136, 0.1)',
+                        'glass-dark': 'rgba(26, 26, 26, 0.8)'
+                    },
+                    fontFamily: {
+                        'sans': ['Source Sans Pro', 'system-ui', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif'],
+                        'display': ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Source+Sans+Pro:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            letter-spacing: 0.01em;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background: #0a0a0a;
+            color: white;
+        }
+
+        /* Enhanced Navigation - Same as Homepage */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 2rem;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .navbar.scrolled {
+            padding: 1rem 2rem;
+        }
+
+        .navbar.scrolled .navbar-container {
+            background: rgba(10, 10, 10, 0.9);
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border-radius: 100px;
+            padding: 0.75rem 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            transition: all 0.4s ease;
+        }
+
+        .navbar-logo {
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: -0.02em;
+        }
+
+        .navbar-menu {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .navbar-link {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+            position: relative;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+        }
+
+        .navbar-link:hover {
+            color: #00ff88;
+            background: rgba(0, 255, 136, 0.05);
+            transform: translateY(-1px);
+        }
+
+        .navbar-link.active {
+            color: #00ff88;
+        }
+
+        .navbar-cta {
+            background: linear-gradient(135deg, #00ff88, #22c55e);
+            color: #0a0a0a;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .navbar-cta:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 8px 25px rgba(0, 255, 136, 0.3);
+        }
+
+        .navbar-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .navbar-cta:hover::before {
+            left: 100%;
+        }
+
+        /* Hero Background - Full Viewport with Blue Theme */
+        .hero-section {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 30%, #16213e 60%, #0f172a 100%);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                radial-gradient(circle at 15% 80%, rgba(59, 130, 246, 0.15) 0%, transparent 30%),
+                radial-gradient(circle at 85% 20%, rgba(14, 165, 233, 0.1) 0%, transparent 30%),
+                radial-gradient(circle at 40% 40%, rgba(37, 99, 235, 0.08) 0%, transparent 40%);
+            z-index: 0;
+        }
+
+        /* Floating Gradient Orbs - Blue Theme */
+        .floating-orb {
+            position: absolute;
+            border-radius: 50%;
+            blur: 3xl;
+            animation: floating 6s ease-in-out infinite;
+        }
+
+        .orb-1 {
+            top: 20%;
+            left: 10%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+            animation-delay: 0s;
+        }
+
+        .orb-2 {
+            bottom: 20%;
+            right: 10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(14, 165, 233, 0.08) 0%, transparent 70%);
+            animation-delay: -3s;
+        }
+
+        .orb-3 {
+            top: 50%;
+            left: 50%;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.06) 0%, transparent 70%);
+            animation-delay: -1.5s;
+            transform: translate(-50%, -50%);
+        }
+
+        @keyframes floating {
+
+            0%,
+            100% {
+                transform: translateY(0px) scale(1);
+                opacity: 0.6;
+            }
+
+            50% {
+                transform: translateY(-20px) scale(1.1);
+                opacity: 0.8;
+            }
+        }
+
+        /* Gallery Styles */
+        .masonry-grid {
+            column-count: 3;
+            column-gap: 1.5rem;
+        }
+
+        .gallery-item {
+            break-inside: avoid;
+            margin-bottom: 1.5rem;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4), 0 0 40px rgba(59, 130, 246, 0.1);
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.6s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            display: flex;
+            align-items: end;
+            padding: 1.5rem;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        @media (max-width: 1024px) {
+            .masonry-grid {
+                column-count: 2;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .masonry-grid {
+                column-count: 1;
+            }
+        }
+
+        /* Category Filters - Blue Theme */
+        .filter-container {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 4rem;
+        }
+
+        .filter-btn {
+            padding: 1rem 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .filter-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .filter-btn:hover::before,
+        .filter-btn.active::before {
+            left: 100%;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            border-color: #3b82f6;
+            background: rgba(59, 130, 246, 0.1);
+            color: #3b82f6;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.2);
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            color: white;
+            font-size: 50px;
+            cursor: pointer;
+            z-index: 2001;
+            transition: all 0.3s ease;
+        }
+
+        .lightbox-close:hover {
+            color: #3b82f6;
+            transform: scale(1.1);
+        }
+
+        /* Mobile hamburger */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background: white;
+            border-radius: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-menu a {
+            color: white;
+            font-size: 2rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .mobile-menu a:hover {
+            color: #3b82f6;
+        }
+
+        /* Info Section */
+        .info-section {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 50%, #1a1a1a 100%);
+            position: relative;
+        }
+
+        .info-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(14, 165, 233, 0.08) 0%, transparent 50%);
+            z-index: 0;
+        }
+
+        .info-section>* {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 50%, #1e293b 100%);
+            position: relative;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(14, 165, 233, 0.08) 0%, transparent 50%);
+            z-index: 0;
+        }
+
+        .cta-section>* {
+            position: relative;
+            z-index: 1;
+        }
+
+        @media (max-width: 768px) {
+
+            .navbar-menu,
+            .navbar-cta {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero-section {
+                min-height: 100vh;
+                padding: 2rem 1rem;
+            }
+
+            .orb-1,
+            .orb-2,
+            .orb-3 {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation - Same as Homepage -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <div class="flex items-center">
+                <div
+                    class="w-8 h-8 bg-gradient-to-br from-neon-green to-electric-green rounded-lg flex items-center justify-center mr-3">
+                    <i class="fas fa-water text-black text-sm"></i>
+                </div>
+                <a href="index.html" class="navbar-logo">Alleppey Backwaters</a>
+            </div>
+            <div class="navbar-menu hidden md:block">
+                <div class="ml-10 flex items-baseline space-x-8">
+                    <a href="index.html" class="navbar-link">Home</a>
+                    <a href="index.html#about" class="navbar-link">About</a>
+                    <a href="index.html#services" class="navbar-link">Services</a>
+                    <a href="index.html#plans" class="navbar-link">Plans</a>
+                    <a href="index.html#testimonials" class="navbar-link">Reviews</a>
+                    <a href="homestay.html" class="navbar-link">Homestay</a>
+                    <a href="houseboat.html" class="navbar-link active">Houseboat</a>
+                    <a href="index.html#contact" class="navbar-link">Contact</a>
+                </div>
+            </div>
+            <button class="navbar-cta">Book Experience</button>
+            <div class="hamburger md:hidden" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#plans">Plans</a>
+        <a href="index.html#testimonials">Reviews</a>
+        <a href="homestay.html">Homestay</a>
+        <a href="houseboat.html">Houseboat</a>
+        <a href="index.html#contact">Contact</a>
+    </div>
+
+    <!-- Hero Section - Full Viewport -->
+    <section class="hero-section">
+        <!-- Floating Orbs -->
+        <div class="floating-orb orb-1"></div>
+        <div class="floating-orb orb-2"></div>
+        <div class="floating-orb orb-3"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div
+                class="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-full mb-8 shadow-lg">
+                <div class="w-3 h-3 bg-blue-400 rounded-full mr-3 animate-pulse"></div>
+                <span class="text-white text-sm font-bold tracking-wider uppercase">Houseboat Gallery</span>
+                <div class="w-3 h-3 bg-cyan-400 rounded-full ml-3 animate-pulse" style="animation-delay: 0.5s;"></div>
+            </div>
+            <h1 class="text-6xl md:text-8xl font-black text-white mb-8 leading-tight drop-shadow-lg">
+                Backwater
+                <span class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Adventures</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto font-light leading-relaxed drop-shadow-md">
+                Explore Kerala's pristine waterways aboard traditional houseboats that we can arrange through our
+                trusted local partners
+            </p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-20 bg-soft-black relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Category Filters -->
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All Photos</button>
+                <button class="filter-btn" data-filter="exterior">Boat Exterior</button>
+                <button class="filter-btn" data-filter="interior">Interior Spaces</button>
+                <button class="filter-btn" data-filter="dining">Dining & Kitchen</button>
+                <button class="filter-btn" data-filter="views">Scenic Views</button>
+                <button class="filter-btn" data-filter="activities">Activities</button>
+            </div>
+
+            <!-- Masonry Gallery -->
+            <div class="masonry-grid" id="gallery">
+
+                <!-- Boat Exterior Photos -->
+                <div class="gallery-item" data-category="exterior"
+                    data-src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop">
+                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop"
+                        alt="Traditional Kerala Houseboat">
+                    <div class="gallery-overlay">
+                        <div class="text-white">
+                            <h4 class="font-bold text-lg mb-2">Traditional Kerala Houseboat</h4>
+                            <p class="text-sm opacity-90">Authentic kettuvallam design</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="exterior"
+                    data-src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&h=500&fit=crop">
+                    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&h=250&fit=crop"
+                        alt="Houseboat on Backwaters">
+                    <div class="gallery-overlay">
+                        <div class="text-white">
+                            <h4 class="font-bold text-lg mb-2">Cruising the Backwaters</h4>
+                            <p class="text-sm opacity-90">Peaceful journey through waterways</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interior Spaces -->
+                <div class="gallery-item" data-category="interior"
+                    data-src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?w=800&h=600&fit=crop">
+                    <img src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?w=400&h=300&fit=crop"
+                        alt="Houseboat Bedroom">
+                    <div class="gallery-overlay">
+                        <div class="text-white">
+                            <h4 class="font-bold text-lg mb-2">Comfortable Bedroom</h4>
+                            <p class="text-sm opacity-90">Cozy sleeping quarters with water views</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="interior"
+                    data-src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=700&fit=crop">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=350&fit=crop"
+                        alt="Houseboat Living Area">
+                    <div class="gallery-overlay">
+                        <div class="text-white">
+                            <h4 class="font-bold text-lg mb-2">Spacious Living Area</h4>
+                            <p class="text-sm opacity-90">Relax and enjoy panoramic views</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dining & Kitchen -->
+                <div class="gallery-item" data-category="dining"
+                    data-src="https://images.unsplash.com/photo-1585032226651-759b368d7246?w=800&h=600&fit=crop">
+                    <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?w=400&h=300&fit=crop"
+                        alt="Fresh Seafood Meal">
+                    <div class="gallery-overlay">
+                        <div class="text-white">
+                            <h4 class="font-bold text-lg mb-2">Fresh Seafood Cuisine</h4>
+                            <p class="text-sm opacity-90">Local delicacies prepared onboard</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="dining"
+                    data-src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=500&fit=crop">
+                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=250&fit=crop"
+                        alt="Dining Setup">
+                    <div class="gallery-overlay">
+                        <div class="text-white">
+                            <h4 class="font-bold text-lg mb-2">Outdoor Dining</h4>
+                            <p class="text-sm opacity-90">Al fresco meals on deck</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scenic Views -->
+                <div class="gallery-item" data-category="views"
+                    data-src="https://images.unsplash.com/photo-1551599189-4bf24b03bb1e?w=800&h=600&fit=crop">
+                    <img src="https://images.unsplash.com/photo-1551599189-4bf24b03bb1e?w=400&h=300&fit=crop"
+                        alt="Backwater Sunrise">
+                    <div class="gallery-overlay">
+                        <div class="text-white">
+                            <h4 class="font-bold text-lg mb-2">Magical Sunrise</h4>
+                            <p class="text-sm opacity-90">Golden hour over the backwaters</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="views"
+                    data-src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=700&fit=crop">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=350&fit=crop"
+                        alt="Sunset Views">
+                    <div class="gallery-overlay">
+                        <div class="text-white">
+                            <h4 class="font-bold text-lg mb-2">Spectacular Sunsets</h4>
+                            <p class="text-sm opacity-90">Evening colors reflecting on water</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="views"
+                    data-src="https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=800&h=500&fit=crop">
+                    <img src="https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=400&h=250&fit=crop"
+                        alt="Village Views">
+                    <div class="gallery-overlay">
+                        <div class="text-white">
+                            <h4 class="font-bold text-lg mb-2">Village Life</h4>
+                            <p class="text-sm opacity-90">Glimpses of local communities</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Activities -->
+                <div class="gallery-item" data-category="activities"
+                    data-src="https://images.unsplash.com/photo-1578895101408-1a36b834405b?w=800&h=600&fit=crop">
+                    <img src="https://images.unsplash.com/photo-1578895101408-1a36b834405b?w=400&h=300&fit=crop"
+                        alt="Local Fishing">
+                    <div class="gallery-overlay">
+                        <div class="text-white">
+                            <h4 class="font-bold text-lg mb-2">Traditional Fishing</h4>
+                            <p class="text-sm opacity-90">Watch local fishermen at work</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="activities"
+                    data-src="https://images.unsplash.com/photo-1605358175102-b052ad8e8b52?w=800&h=500&fit=crop">
+                    <img src="https://images.unsplash.com/photo-1605358175102-b052ad8e8b52?w=400&h=250&fit=crop"
+                        alt="Bird Watching">
+                    <div class="gallery-overlay">
+                        <div class="text-white">
+                            <h4 class="font-bold text-lg mb-2">Bird Watching</h4>
+                            <p class="text-sm opacity-90">Spot exotic Kerala birds</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Photos -->
+                <div class="gallery-item" data-category="exterior"
+                    data-src="https://images.unsplash.com/photo-1539650116574-75c0c6d73a1e?w=800&h=600&fit=crop">
+                    <img src="https://images.unsplash.com/photo-1539650116574-75c0c6d73a1e?w=400&h=300&fit=crop"
+                        alt="Houseboat Deck">
+                    <div class="gallery-overlay">
+                        <div class="text-white">
+                            <h4 class="font-bold text-lg mb-2">Spacious Deck</h4>
+                            <p class="text-sm opacity-90">Perfect for relaxation and photography</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="views"
+                    data-src="https://images.unsplash.com/photo-1571939228382-b2f2b585ce15?w=800&h=700&fit=crop">
+                    <img src="https://images.unsplash.com/photo-1571939228382-b2f2b585ce15?w=400&h=350&fit=crop"
+                        alt="Coconut Palm Views">
+                    <div class="gallery-overlay">
+                        <div class="text-white">
+                            <h4 class="font-bold text-lg mb-2">Tropical Paradise</h4>
+                            <p class="text-sm opacity-90">Coconut palms lining the waterways</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="activities"
+                    data-src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800&h=500&fit=crop">
+                    <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=400&h=250&fit=crop"
+                        alt="Photography Opportunities">
+                    <div class="gallery-overlay">
+                        <div class="text-white">
+                            <h4 class="font-bold text-lg mb-2">Perfect Photo Spots</h4>
+                            <p class="text-sm opacity-90">Capture memories that last forever</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Information Section -->
+    <section class="py-20 info-section">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">About Our Houseboat Experiences</h2>
+            <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+                While we specialize in homestay experiences, we work with trusted local houseboat operators to offer you
+                authentic backwater adventures. Through our connections, we can arrange customized houseboat trips that
+                perfectly complement your homestay experience.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                <div class="text-center">
+                    <div
+                        class="w-16 h-16 bg-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-blue-500/30">
+                        <i class="fas fa-handshake text-blue-400 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-white mb-2">Trusted Partners</h3>
+                    <p class="text-gray-400">We work with reliable local operators</p>
+                </div>
+                <div class="text-center">
+                    <div
+                        class="w-16 h-16 bg-green-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-green-500/30">
+                        <i class="fas fa-tags text-green-400 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-white mb-2">Fair Pricing</h3>
+                    <p class="text-gray-400">Honest rates with no hidden charges</p>
+                </div>
+                <div class="text-center">
+                    <div
+                        class="w-16 h-16 bg-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-purple-500/30">
+                        <i class="fas fa-cog text-purple-400 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-white mb-2">Custom Packages</h3>
+                    <p class="text-gray-400">Tailored to your preferences and duration</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 cta-section">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Ready for a Backwater Adventure?</h2>
+            <p class="text-xl text-gray-300 mb-8 leading-relaxed">Contact us to arrange your perfect combination of
+                homestay comfort and houseboat exploration</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button
+                    class="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 relative overflow-hidden">
+                    <span class="relative z-10">Inquire About Houseboats</span>
+                </button>
+                <a href="homestay.html"
+                    class="border-2 border-gray-600 hover:border-blue-500 text-gray-300 hover:text-blue-400 font-bold py-4 px-8 rounded-xl hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                    View Homestay Gallery
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Gallery filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+
+                galleryItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Lightbox functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.getElementById('lightbox-close');
+
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const src = item.getAttribute('data-src');
+                const alt = item.querySelector('img').getAttribute('alt');
+
+                lightboxImg.src = src;
+                lightboxImg.alt = alt;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        lightboxClose.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+
+                if (mobileMenu.classList.contains('active')) {
+                    hamburger.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+
+        console.log('🛥️ Sophisticated Houseboat Gallery loaded successfully!');
+    </script>
+</body>
+
+</html>

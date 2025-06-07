@@ -38,6 +38,38 @@
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Source+Sans+Pro:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
+    <!-- FIXED: Simple FOSC Prevention - Add this FIRST -->
+    <style>
+        /* Simple FOSC Prevention */
+        .hero-element {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .hero-element.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Staggered delays */
+        .hero-element.delay-1 {
+            transition-delay: 0.1s;
+        }
+
+        .hero-element.delay-2 {
+            transition-delay: 0.3s;
+        }
+
+        .hero-element.delay-3 {
+            transition-delay: 0.5s;
+        }
+
+        .hero-element.delay-4 {
+            transition-delay: 0.7s;
+        }
+    </style>
+
     <style>
         * {
             margin: 0;
@@ -579,7 +611,7 @@
         <a href="index.html#contact">Contact</a>
     </div>
 
-    <!-- Hero Section - Full Viewport -->
+    <!-- FIXED: Hero Section with proper animation classes -->
     <section class="hero-section">
         <!-- Floating Orbs -->
         <div class="floating-orb orb-1"></div>
@@ -587,17 +619,24 @@
         <div class="floating-orb orb-3"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <!-- FIXED: Added hero-element delay-1 -->
             <div
-                class="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-full mb-8 shadow-lg">
+                class="hero-element delay-1 inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-full mb-8 shadow-lg">
                 <div class="w-3 h-3 bg-blue-400 rounded-full mr-3 animate-pulse"></div>
                 <span class="text-white text-sm font-bold tracking-wider uppercase">Houseboat Gallery</span>
                 <div class="w-3 h-3 bg-cyan-400 rounded-full ml-3 animate-pulse" style="animation-delay: 0.5s;"></div>
             </div>
-            <h1 class="text-6xl md:text-8xl font-black text-white mb-8 leading-tight drop-shadow-lg">
+
+            <!-- FIXED: Added hero-element delay-2 -->
+            <h1
+                class="hero-element delay-2 text-6xl md:text-8xl font-black text-white mb-8 leading-tight drop-shadow-lg">
                 Backwater
                 <span class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Adventures</span>
             </h1>
-            <p class="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto font-light leading-relaxed drop-shadow-md">
+
+            <!-- FIXED: Added hero-element delay-3 -->
+            <p
+                class="hero-element delay-3 text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto font-light leading-relaxed drop-shadow-md">
                 Explore Kerala's pristine waterways aboard traditional houseboats that we can arrange through our
                 trusted local partners
             </p>
@@ -863,7 +902,48 @@
         <img id="lightbox-img" src="" alt="">
     </div>
 
+    <!-- FIXED: Simple JavaScript Animation - NO FLASH -->
     <script>
+        // Simple hero animation - NO FLASH
+        function initHeroAnimation() {
+            setTimeout(() => {
+                const heroElements = document.querySelectorAll('.hero-element');
+
+                heroElements.forEach((element, index) => {
+                    setTimeout(() => {
+                        element.classList.add('animate');
+                    }, index * 100);
+                });
+
+                console.log('✨ Houseboat hero animation complete - NO FLASH!');
+            }, 100);
+        }
+
+        // Multiple initialization methods for reliability
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initHeroAnimation);
+        } else {
+            initHeroAnimation();
+        }
+
+        // Backup trigger
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const unanimated = document.querySelectorAll('.hero-element:not(.animate)');
+                if (unanimated.length > 0) {
+                    unanimated.forEach(el => el.classList.add('animate'));
+                }
+            }, 200);
+        });
+
+        // Restart function for testing
+        window.restartHeroAnimation = function () {
+            document.querySelectorAll('.hero-element').forEach(el => {
+                el.classList.remove('animate');
+            });
+            setTimeout(initHeroAnimation, 50);
+        };
+
         // Navbar scroll effect
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
@@ -962,313 +1042,7 @@
             });
         });
 
-        console.log('🛥️ Sophisticated Houseboat Gallery loaded successfully!');
-    </script>
-    <script>
-        // Hero Text Power Animations Script
-            // Add this to your existing pages
-
-            // CSS Animations (add to your stylesheet)
-            const heroAnimationCSS = `
-<style>
-/* Hero Text Animations */
-.hero-text-animated {
-    opacity: 0;
-    transform: translateY(60px);
-    animation: heroTextReveal 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-}
-
-.hero-text-stagger-1 { animation-delay: 0.2s; }
-.hero-text-stagger-2 { animation-delay: 0.4s; }
-.hero-text-stagger-3 { animation-delay: 0.6s; }
-.hero-text-stagger-4 { animation-delay: 0.8s; }
-
-.hero-description-animated {
-    opacity: 0;
-    transform: translateY(40px);
-    animation: heroDescReveal 1.0s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-    animation-delay: 1.0s;
-}
-
-.hero-buttons-animated {
-    opacity: 0;
-    transform: translateY(30px);
-    animation: heroButtonsReveal 1.0s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-    animation-delay: 1.3s;
-}
-
-.hero-badge-animated {
-    opacity: 0;
-    transform: translateY(-30px);
-    animation: heroBadgeReveal 1.0s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-    animation-delay: 0s;
-}
-
-/* Keyframes */
-@keyframes heroTextReveal {
-    0% {
-        opacity: 0;
-        transform: translateY(60px) scale(0.8);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
-
-@keyframes heroDescReveal {
-    0% {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes heroButtonsReveal {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes heroBadgeReveal {
-    0% {
-        opacity: 0;
-        transform: translateY(-30px) scale(0.8);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
-
-/* Typewriter Effect */
-.typewriter {
-    overflow: hidden;
-    border-right: 3px solid #00ff88;
-    white-space: nowrap;
-    margin: 0 auto;
-    animation: typewriter 3s steps(40) 1s forwards, blink 0.8s infinite;
-}
-
-@keyframes typewriter {
-    from { width: 0; }
-    to { width: 100%; }
-}
-
-@keyframes blink {
-    50% { border-color: transparent; }
-}
-
-/* Glitch Effect for Special Text */
-.glitch {
-    position: relative;
-    animation: glitch 2s linear infinite;
-}
-
-.glitch::before,
-.glitch::after {
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.glitch::before {
-    animation: glitch-1 0.5s linear infinite reverse;
-    color: #00ff88;
-    z-index: -1;
-}
-
-.glitch::after {
-    animation: glitch-2 0.5s linear infinite reverse;
-    color: #22c55e;
-    z-index: -2;
-}
-
-@keyframes glitch {
-    0%, 14%, 15%, 49%, 50%, 99%, 100% {
-        transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg);
-    }
-    1%, 13% {
-        transform: translate3d(-2px, 0, 0) rotateX(0deg) rotateY(0deg);
-    }
-    16%, 48% {
-        transform: translate3d(2px, 0, 0) rotateX(0deg) rotateY(0deg);
-    }
-}
-
-@keyframes glitch-1 {
-    0%, 14%, 15%, 49%, 50%, 99%, 100% {
-        transform: translate3d(0, 0, 0);
-    }
-    1%, 13% {
-        transform: translate3d(-2px, 0, 0);
-    }
-    16%, 48% {
-        transform: translate3d(2px, 0, 0);
-    }
-}
-
-@keyframes glitch-2 {
-    0%, 14%, 15%, 49%, 50%, 99%, 100% {
-        transform: translate3d(0, 0, 0);
-    }
-    1%, 13% {
-        transform: translate3d(2px, 0, 0);
-    }
-    16%, 48% {
-        transform: translate3d(-2px, 0, 0);
-    }
-}
-
-/* Text Splitting Animation */
-.text-split {
-    overflow: hidden;
-}
-
-.text-split .char {
-    display: inline-block;
-    opacity: 0;
-    transform: translateY(100px) rotateX(-90deg);
-    animation: charReveal 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-}
-</style>
-`;
-
-            // JavaScript Animation Functions
-            function initHeroAnimations() {
-                // Add CSS to document head
-                document.head.insertAdjacentHTML('beforeend', heroAnimationCSS);
-
-                // Apply animation classes to existing elements
-                applyAnimationClasses();
-
-                // Initialize special effects
-                initTypewriterEffect();
-                initTextSplitAnimation();
-                initGlitchEffect();
-            }
-
-            function applyAnimationClasses() {
-                // Hero badge animation
-                const heroBadge = document.querySelector('.inline-flex.items-center.px-6.py-3');
-                if (heroBadge) {
-                    heroBadge.classList.add('hero-badge-animated');
-                }
-
-                // Hero title animation (split into lines)
-                const heroTitle = document.querySelector('h1');
-                if (heroTitle) {
-                    heroTitle.classList.add('hero-text-animated', 'hero-text-stagger-1');
-                }
-
-                // Hero description animation
-                const heroDesc = document.querySelector('.text-xl.text-gray-300, .text-xl.text-gray-600');
-                if (heroDesc) {
-                    heroDesc.classList.add('hero-description-animated');
-                }
-
-                // Hero buttons animation
-                const heroButtons = document.querySelector('.flex.flex-col.sm\\:flex-row.gap-6, .flex.flex-col.sm\\:flex-row.gap-4');
-                if (heroButtons) {
-                    heroButtons.classList.add('hero-buttons-animated');
-                }
-            }
-
-            function initTypewriterEffect() {
-                const typewriterElements = document.querySelectorAll('.typewriter-text');
-
-                typewriterElements.forEach(element => {
-                    const text = element.textContent;
-                    element.textContent = '';
-                    element.classList.add('typewriter');
-
-                    let i = 0;
-                    const timer = setInterval(() => {
-                        element.textContent += text.charAt(i);
-                        i++;
-                        if (i > text.length) {
-                            clearInterval(timer);
-                            element.style.borderRight = 'none';
-                        }
-                    }, 100);
-                });
-            }
-
-            function initTextSplitAnimation() {
-                const splitTextElements = document.querySelectorAll('.split-text');
-
-                splitTextElements.forEach(element => {
-                    const text = element.textContent;
-                    element.innerHTML = '';
-                    element.classList.add('text-split');
-
-                    text.split('').forEach((char, index) => {
-                        const span = document.createElement('span');
-                        span.textContent = char === ' ' ? '\u00A0' : char;
-                        span.classList.add('char');
-                        span.style.animationDelay = `${index * 0.05}s`;
-                        element.appendChild(span);
-                    });
-                });
-            }
-
-            function initGlitchEffect() {
-                const glitchElements = document.querySelectorAll('.glitch-text');
-
-                glitchElements.forEach(element => {
-                    element.classList.add('glitch');
-                    element.setAttribute('data-text', element.textContent);
-                });
-            }
-
-            // Intersection Observer for scroll-triggered animations
-            function initScrollAnimations() {
-                const observerOptions = {
-                    threshold: 0.3,
-                    rootMargin: '0px 0px -100px 0px'
-                };
-
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('animate-in');
-                        }
-                    });
-                }, observerOptions);
-
-                // Observe elements that should animate on scroll
-                document.querySelectorAll('.scroll-animate').forEach(el => {
-                    observer.observe(el);
-                });
-            }
-
-            // Initialize everything when DOM is loaded
-            document.addEventListener('DOMContentLoaded', () => {
-                // Add a small delay to ensure all elements are rendered
-                setTimeout(() => {
-                    initHeroAnimations();
-                    initScrollAnimations();
-                }, 100);
-            });
-
-            // Usage Examples:
-            // 1. Add class "typewriter-text" to any element for typewriter effect
-            // 2. Add class "split-text" to any element for character reveal animation
-            // 3. Add class "glitch-text" to any element for glitch effect
-            // 4. Add class "scroll-animate" to any element for scroll-triggered animation
-
-            console.log('🎬 Hero Power Animations loaded successfully!');
+        console.log('🛥️ Complete Houseboat Gallery loaded successfully - NO FLASH!');
     </script>
 </body>
 

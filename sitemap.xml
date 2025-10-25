@@ -23,6 +23,46 @@
             <image:loc>https://alleppeyhomes.com/logo.png</image:loc>
             <image:title>Alleppey Homes Logo</image:title>
         </image:image>
+        <image:image>
+            <image:loc>https://alleppeyhomes.com/about.jpg</image:loc>
+            <image:title>About Alleppey Homes - Authentic Kerala Homestay Experience</image:title>
+            <image:caption>Discover our family-run homestay in the heart of Alleppey backwaters</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://alleppeyhomes.com/gallery1.png</image:loc>
+            <image:title>Kerala Backwaters Scenic View - Alleppey Homes</image:title>
+            <image:caption>Stunning view of Alleppey backwaters from our homestay location</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://alleppeyhomes.com/gallery2.png</image:loc>
+            <image:title>Traditional Houseboat on Alleppey Backwaters</image:title>
+            <image:caption>Experience luxury houseboat cruises through serene Kerala backwaters</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://alleppeyhomes.com/gallery3.jpg</image:loc>
+            <image:title>Kerala Homestay Interior - Authentic Accommodation</image:title>
+            <image:caption>Comfortable and traditional homestay rooms in Alleppey</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://alleppeyhomes.com/gallery4.png</image:loc>
+            <image:title>Alleppey Village Life and Backwater Culture</image:title>
+            <image:caption>Immerse yourself in authentic Kerala village lifestyle</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://alleppeyhomes.com/gallery5.png</image:loc>
+            <image:title>Traditional Kerala Food and Cuisine</image:title>
+            <image:caption>Enjoy authentic home-cooked Kerala meals during your stay</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://alleppeyhomes.com/gallery6.png</image:loc>
+            <image:title>Sunset on Alleppey Backwaters</image:title>
+            <image:caption>Breathtaking sunset views from Kerala backwaters</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://alleppeyhomes.com/backwater.png</image:loc>
+            <image:title>Pristine Alleppey Backwaters Natural Beauty</image:title>
+            <image:caption>Experience the untouched beauty of Alappuzha backwaters</image:caption>
+        </image:image>
         <video:video>
             <video:thumbnail_loc>https://alleppeyhomes.com/hero.png</video:thumbnail_loc>
             <video:title>Experience a Kerala Backwater Homestay &amp; Houseboat in Alleppey</video:title>
@@ -51,6 +91,36 @@
             <image:title>Kerala Homestay Experience - Alleppey Homes</image:title>
             <image:caption>Authentic traditional Kerala homestay in Alleppey backwaters</image:caption>
         </image:image>
+        <image:image>
+            <image:loc>https://alleppeyhomes.com/bedroom.jpg</image:loc>
+            <image:title>Comfortable Homestay Bedroom - Alleppey Homes</image:title>
+            <image:caption>Clean, comfortable bedrooms with modern amenities in our Alleppey homestay</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://alleppeyhomes.com/guestroom.jpg</image:loc>
+            <image:title>Guest Room in Alleppey Homestay</image:title>
+            <image:caption>Well-appointed guest rooms with Kerala traditional touch</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://alleppeyhomes.com/bathroom.jpg</image:loc>
+            <image:title>Modern Bathroom Facilities - Alleppey Homestay</image:title>
+            <image:caption>Clean and modern bathroom facilities in our homestay</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://alleppeyhomes.com/livingroom.jpg</image:loc>
+            <image:title>Homestay Living Room - Common Area</image:title>
+            <image:caption>Comfortable living area for guests to relax and socialize</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://alleppeyhomes.com/garden.jpg</image:loc>
+            <image:title>Beautiful Garden at Alleppey Homestay</image:title>
+            <image:caption>Lush green garden surrounding our homestay property</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://alleppeyhomes.com/parking.jpg</image:loc>
+            <image:title>Free Parking Available - Alleppey Homestay</image:title>
+            <image:caption>Secure parking facility available for guests</image:caption>
+        </image:image>
     </url>
 
     <!-- Houseboat Page -->
@@ -63,6 +133,46 @@
             <image:loc>https://alleppeyhomes.com/houseboat.jpg</image:loc>
             <image:title>Luxury Houseboat Experience - Alleppey Homes</image:title>
             <image:caption>Premium houseboat cruise in Alleppey backwaters</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://alleppeyhomes.com/deluxe.jpg</image:loc>
+            <image:title>Deluxe Houseboat - Alleppey Backwater Cruise</image:title>
+            <image:caption>Deluxe category houseboat with premium amenities</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://alleppeyhomes.com/luxury.png</image:loc>
+            <image:title>Luxury Houseboat - Premium Kerala Experience</image:title>
+            <image:caption>Luxury houseboat with air conditioning and modern facilities</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://alleppeyhomes.com/houseboat/pic1.png</image:loc>
+            <image:title>Houseboat Interior - Alleppey</image:title>
+            <image:caption>Beautiful interior of traditional Kerala houseboat</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://alleppeyhomes.com/houseboat/pic2.png</image:loc>
+            <image:title>Houseboat Deck View - Backwaters</image:title>
+            <image:caption>Scenic deck view from our houseboat cruise</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://alleppeyhomes.com/houseboat/pic3.png</image:loc>
+            <image:title>Houseboat Bedroom - Alleppey</image:title>
+            <image:caption>Comfortable bedroom in our luxury houseboat</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://alleppeyhomes.com/houseboat/pic4.png</image:loc>
+            <image:title>Houseboat Dining Area</image:title>
+            <image:caption>Dining area with Kerala traditional food service</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://alleppeyhomes.com/houseboat/pic5.png</image:loc>
+            <image:title>Houseboat Cruise Scenery - Kerala</image:title>
+            <image:caption>Stunning backwater scenery during houseboat cruise</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://alleppeyhomes.com/houseboat/pic6.png</image:loc>
+            <image:title>Traditional Kettuvallam Houseboat</image:title>
+            <image:caption>Authentic Kerala kettuvallam houseboat design</image:caption>
         </image:image>
     </url>
 
@@ -80,6 +190,30 @@
         <lastmod>2025-10-25</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
+    </url>
+
+    <!-- Contact Page -->
+    <url>
+        <loc>https://alleppeyhomes.com/contact.html</loc>
+        <lastmod>2025-10-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Blog Homepage -->
+    <url>
+        <loc>https://alleppeyhomes.com/blog.html</loc>
+        <lastmod>2025-10-25</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Blog Post: Top 10 Things to Do in Alleppey -->
+    <url>
+        <loc>https://alleppeyhomes.com/blog-top-10-things-alleppey.html</loc>
+        <lastmod>2025-10-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
 
 </urlset>

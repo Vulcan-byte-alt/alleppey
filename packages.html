@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="https://schema.org/TouristTrip">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kerala Tour Packages - Homestay & Houseboat Packages | Alleppey Homes</title>
+    <meta name="description" content="Discover our curated Kerala tour packages combining homestay and houseboat experiences in Alleppey. Honeymoon, family, and custom packages available. Book your perfect backwaters holiday today!">
+    <meta name="keywords" content="Kerala tour packages, Alleppey packages, homestay houseboat combo, honeymoon package Kerala, family tour Alleppey, backwater holiday packages, Alappuzha tour, Kerala vacation packages">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://alleppeyhomes.com/packages.html">
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="Alleppey Homes">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Kerala Tour Packages - Homestay & Houseboat | Alleppey Homes">
+    <meta property="og:description" content="Curated Kerala tour packages with homestay and houseboat experiences in Alleppey backwaters.">
+    <meta property="og:url" content="https://alleppeyhomes.com/packages.html">
+    <meta property="og:image" content="https://alleppeyhomes.com/hero.png">
+
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <meta name="theme-color" content="#00ff88">
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4DEB85PM0H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-4DEB85PM0H');
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            color: white;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin: 2rem 0;
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(135deg, #00ff88, #22c55e);
+            color: #0a0a0a;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #00ff88, #22c55e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 3rem;
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .package-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .package-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(0, 255, 136, 0.5);
+            box-shadow: 0 15px 40px rgba(0, 255, 136, 0.2);
+        }
+
+        .package-header {
+            background: linear-gradient(135deg, rgba(0, 255, 136, 0.2), rgba(34, 197, 94, 0.2));
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(0, 255, 136, 0.3);
+        }
+
+        .package-header h3 {
+            font-size: 1.8rem;
+            color: #00ff88;
+            margin-bottom: 0.5rem;
+        }
+
+        .package-duration {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.1rem;
+        }
+
+        .package-price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #00ff88;
+            margin: 1rem 0;
+        }
+
+        .package-price span {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .package-body {
+            padding: 2rem;
+        }
+
+        .package-features {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .package-features li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .package-features li:before {
+            content: "✓ ";
+            color: #00ff88;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .package-btn {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, #00ff88, #22c55e);
+            color: #0a0a0a;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 1.5rem;
+        }
+
+        .package-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 255, 136, 0.3);
+        }
+
+        .best-value {
+            position: relative;
+        }
+
+        .best-value::before {
+            content: "MOST POPULAR";
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: #00ff88;
+            color: #0a0a0a;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            z-index: 10;
+        }
+
+        .custom-section {
+            background: linear-gradient(135deg, rgba(0, 255, 136, 0.1), rgba(34, 197, 94, 0.1));
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            border-radius: 16px;
+            padding: 3rem;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .custom-section h2 {
+            font-size: 2rem;
+            color: #00ff88;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .packages-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-link">← Back to Home</a>
+
+        <h1>Kerala Tour Packages</h1>
+        <p class="subtitle">Curated experiences combining the best of Alleppey homestays and houseboat cruises</p>
+
+        <div class="packages-grid">
+            <!-- Honeymoon Package -->
+            <div class="package-card">
+                <div class="package-header">
+                    <h3>🌺 Honeymoon Special</h3>
+                    <p class="package-duration">3 Days / 2 Nights</p>
+                    <div class="package-price">₹12,999 <span>per couple</span></div>
+                </div>
+                <div class="package-body">
+                    <ul class="package-features">
+                        <li>1 Night Premium Homestay (AC Room)</li>
+                        <li>1 Day Luxury Houseboat Cruise</li>
+                        <li>Candlelight Dinner</li>
+                        <li>Flower Decoration</li>
+                        <li>All Meals Included</li>
+                        <li>Complimentary Sunset Cruise</li>
+                        <li>Airport/Railway Pickup & Drop</li>
+                        <li>Photography Session</li>
+                    </ul>
+                    <a href="tel:+919946021397" class="package-btn">Book Honeymoon Package</a>
+                </div>
+            </div>
+
+            <!-- Family Package -->
+            <div class="package-card best-value">
+                <div class="package-header">
+                    <h3>👨‍👩‍👧‍👦 Family Explorer</h3>
+                    <p class="package-duration">4 Days / 3 Nights</p>
+                    <div class="package-price">₹24,999 <span>for 4 people</span></div>
+                </div>
+                <div class="package-body">
+                    <ul class="package-features">
+                        <li>2 Nights Family Homestay</li>
+                        <li>1 Day Premium Houseboat</li>
+                        <li>Village Tour & Cultural Experience</li>
+                        <li>Toddy Shop Visit</li>
+                        <li>Fishing Experience</li>
+                        <li>Traditional Kerala Meals</li>
+                        <li>Bird Watching Tour</li>
+                        <li>Free WiFi & Parking</li>
+                    </ul>
+                    <a href="tel:+919946021397" class="package-btn">Book Family Package</a>
+                </div>
+            </div>
+
+            <!-- Weekend Getaway -->
+            <div class="package-card">
+                <div class="package-header">
+                    <h3>🏖️ Weekend Escape</h3>
+                    <p class="package-duration">2 Days / 1 Night</p>
+                    <div class="package-price">₹6,999 <span>per person</span></div>
+                </div>
+                <div class="package-body">
+                    <ul class="package-features">
+                        <li>1 Night Homestay (AC/Non-AC)</li>
+                        <li>Half-Day Houseboat Cruise</li>
+                        <li>Breakfast & Dinner</li>
+                        <li>Backwater Sightseeing</li>
+                        <li>Local Village Walk</li>
+                        <li>Traditional Kerala Tea</li>
+                        <li>Free Parking</li>
+                    </ul>
+                    <a href="tel:+919946021397" class="package-btn">Book Weekend Package</a>
+                </div>
+            </div>
+
+            <!-- Luxury Experience -->
+            <div class="package-card">
+                <div class="package-header">
+                    <h3>⭐ Luxury Backwaters</h3>
+                    <p class="package-duration">5 Days / 4 Nights</p>
+                    <div class="package-price">₹45,999 <span>per couple</span></div>
+                </div>
+                <div class="package-body">
+                    <ul class="package-features">
+                        <li>3 Nights Premium Homestay</li>
+                        <li>2 Days Luxury Houseboat</li>
+                        <li>Ayurvedic Spa Treatment</li>
+                        <li>Cultural Dance Performance</li>
+                        <li>Chef's Special Kerala Cuisine</li>
+                        <li>Private Canoe Rides</li>
+                        <li>All Transfers Included</li>
+                        <li>Professional Photography</li>
+                    </ul>
+                    <a href="tel:+919946021397" class="package-btn">Book Luxury Package</a>
+                </div>
+            </div>
+
+            <!-- Budget Package -->
+            <div class="package-card">
+                <div class="package-header">
+                    <h3>💰 Budget Backwaters</h3>
+                    <p class="package-duration">2 Days / 1 Night</p>
+                    <div class="package-price">₹4,499 <span>per person</span></div>
+                </div>
+                <div class="package-body">
+                    <ul class="package-features">
+                        <li>1 Night Non-AC Homestay</li>
+                        <li>Canoe Ride in Backwaters</li>
+                        <li>Breakfast & Dinner</li>
+                        <li>Village Tour</li>
+                        <li>Local Sightseeing</li>
+                        <li>Bicycle Rental Included</li>
+                        <li>Free WiFi</li>
+                    </ul>
+                    <a href="tel:+919946021397" class="package-btn">Book Budget Package</a>
+                </div>
+            </div>
+
+            <!-- Group Package -->
+            <div class="package-card">
+                <div class="package-header">
+                    <h3>👥 Group Adventure</h3>
+                    <p class="package-duration">3 Days / 2 Nights</p>
+                    <div class="package-price">₹8,999 <span>per person</span></div>
+                </div>
+                <div class="package-body">
+                    <ul class="package-features">
+                        <li>2 Nights Group Accommodation</li>
+                        <li>1 Day Houseboat (Group Boat)</li>
+                        <li>All Meals Included</li>
+                        <li>Team Building Activities</li>
+                        <li>Campfire Evening</li>
+                        <li>Village Cultural Tour</li>
+                        <li>Group Photography</li>
+                        <li>Minimum 6 people</li>
+                    </ul>
+                    <a href="tel:+919946021397" class="package-btn">Book Group Package</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="custom-section">
+            <h2>Need a Custom Package?</h2>
+            <p style="color: rgba(255,255,255,0.8); margin-bottom: 2rem; font-size: 1.1rem;">
+                We can create a personalized itinerary based on your preferences, budget, and duration.<br>
+                Contact us to design your perfect Kerala experience!
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="tel:+919946021397" style="padding: 1rem 2rem; background: linear-gradient(135deg, #00ff88, #22c55e); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">Call Now</a>
+                <a href="mailto:homesalleppey@gmail.com" style="padding: 1rem 2rem; border: 2px solid #00ff88; color: #00ff88; text-decoration: none; border-radius: 8px; font-weight: 600;">Email Us</a>
+                <a href="https://wa.me/919946021397" style="padding: 1rem 2rem; border: 2px solid #00ff88; color: #00ff88; text-decoration: none; border-radius: 8px; font-weight: 600;">WhatsApp</a>
+            </div>
+        </div>
+
+        <div style="background: rgba(255,255,255,0.05); border-radius: 16px; padding: 2rem; margin: 3rem 0;">
+            <h3 style="color: #00ff88; margin-bottom: 1rem; text-align: center;">All Packages Include</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; text-align: center;">
+                <div>✓ Comfortable Accommodation</div>
+                <div>✓ Traditional Kerala Meals</div>
+                <div>✓ Experienced Local Guides</div>
+                <div>✓ Clean & Hygienic Facilities</div>
+                <div>✓ 24/7 Customer Support</div>
+                <div>✓ Flexible Cancellation Policy</div>
+            </div>
+        </div>
+
+        <p style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
+            <a href="/" style="color: #00ff88; text-decoration: none;">← Return to Homepage</a> |
+            <a href="/homestay.html" style="color: #00ff88; text-decoration: none;">Homestay</a> |
+            <a href="/houseboat.html" style="color: #00ff88; text-decoration: none;">Houseboat</a> |
+            <a href="/contact.html" style="color: #00ff88; text-decoration: none;">Contact Us</a>
+        </p>
+    </div>
+</body>
+</html>

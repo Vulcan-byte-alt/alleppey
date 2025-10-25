@@ -1,0 +1,33 @@
+# Robots.txt for Alleppey Homes - Kerala Homestay & Houseboat
+# https://alleppeyhomes.com
+
+User-agent: *
+Allow: /
+
+# Disallow common non-content directories (if any)
+# Disallow: /cgi-bin/
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow all bots to crawl main content
+Allow: /index.html
+Allow: /homestay.html
+Allow: /houseboat.html
+
+# Allow access to CSS and JS for proper rendering
+Allow: /*.css
+Allow: /*.js
+
+# Allow images for image search
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.png
+Allow: /*.gif
+Allow: /*.webp
+Allow: /*.svg
+
+# Sitemap location
+Sitemap: https://alleppeyhomes.com/sitemap.xml
+
+# Crawl-delay (optional - remove if not needed)
+# Crawl-delay: 1

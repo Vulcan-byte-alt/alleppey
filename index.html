@@ -90,6 +90,18 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
 
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4DEB85PM0H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-4DEB85PM0H', {
+            'send_page_view': true,
+            'anonymize_ip': true
+        });
+    </script>
+
     <!-- *** ULTIMATE STRUCTURED DATA FOR SEO (JSON-LD) *** -->
     <script type="application/ld+json">
     {
@@ -596,6 +608,7 @@
             align-items: center;
             max-width: 1400px;
             margin: 0 auto;
+            border: 1px solid transparent;
             transition: all 0.4s ease;
         }
 

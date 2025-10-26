@@ -2,11 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-                           http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd
-                           http://www.google.com/schemas/sitemap-video/1.1
-                           http://www.google.com/schemas/sitemap-video/1.1/sitemap-video.xsd">
+                           http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
     <!-- Main Homepage -->
     <url>
@@ -63,21 +60,6 @@
             <image:title>Pristine Alleppey Backwaters Natural Beauty</image:title>
             <image:caption>Experience the untouched beauty of Alappuzha backwaters</image:caption>
         </image:image>
-        <video:video>
-            <video:thumbnail_loc>https://alleppeyhomes.com/hero.png</video:thumbnail_loc>
-            <video:title>Experience a Kerala Backwater Homestay &amp; Houseboat in Alleppey</video:title>
-            <video:description>Watch a glimpse of the magical beauty of Kerala's backwaters with Alleppey Homes. See our traditional homestay and luxury houseboat cruises in Alappuzha. Explore authentic village life, traditional houseboats, and serene backwater views.</video:description>
-            <video:content_loc>https://alleppeyhomes.com/hero.mp4</video:content_loc>
-            <video:duration>90</video:duration>
-            <video:publication_date>2025-10-25T08:00:00+05:30</video:publication_date>
-            <video:family_friendly>yes</video:family_friendly>
-            <video:tag>Kerala homestay</video:tag>
-            <video:tag>Alleppey houseboat</video:tag>
-            <video:tag>Backwaters Kerala</video:tag>
-            <video:tag>Alappuzha tourism</video:tag>
-            <video:tag>Kerala travel</video:tag>
-            <video:category>Travel</video:category>
-        </video:video>
     </url>
 
     <!-- Homestay Page -->

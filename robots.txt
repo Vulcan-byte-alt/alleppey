@@ -4,10 +4,12 @@
 User-agent: *
 Allow: /
 
-# Disallow common non-content directories (if any)
-# Disallow: /cgi-bin/
-# Disallow: /admin/
-# Disallow: /private/
+# Disallow common non-content directories and parameters
+Disallow: /cgi-bin/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*?s=*
+Disallow: /blog/
 
 # Allow all bots to crawl main content
 Allow: /index.html

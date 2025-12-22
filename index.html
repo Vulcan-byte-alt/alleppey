@@ -1526,6 +1526,74 @@
             }
         }
     </style>
+
+    <!-- LocalBusiness Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LodgingBusiness",
+        "name": "Alleppey Homes",
+        "image": "https://alleppeyhomes.com/hero.png",
+        "description": "Authentic Kerala homestay and luxury houseboat cruises in Alleppey (Alappuzha) backwaters. Traditional accommodation, local food, and cultural tours.",
+        "@id": "https://alleppeyhomes.com",
+        "url": "https://alleppeyhomes.com",
+        "telephone": "+919946021397",
+        "email": "homesalleppey@gmail.com",
+        "priceRange": "$$",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Darul Hamdu, Avulukunnu P.O., South Aryad",
+            "addressLocality": "Alleppey",
+            "addressRegion": "Kerala",
+            "postalCode": "688006",
+            "addressCountry": "IN"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 9.4981,
+            "longitude": 76.3388
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday"
+            ],
+            "opens": "00:00",
+            "closes": "23:59"
+        },
+        "sameAs": [
+            "https://twitter.com/alleppeyhomes"
+        ],
+        "amenityFeature": [
+            {
+                "@type": "LocationFeatureSpecification",
+                "name": "Free WiFi",
+                "value": true
+            },
+            {
+                "@type": "LocationFeatureSpecification",
+                "name": "Free Parking",
+                "value": true
+            },
+            {
+                "@type": "LocationFeatureSpecification",
+                "name": "Air Conditioning",
+                "value": true
+            }
+        ],
+        "areaServed": {
+            "@type": "City",
+            "name": "Alleppey (Alappuzha)"
+        },
+        "keywords": "homestay in alleppey, homestay in alappuzha, houseboat in alleppey, houseboat alleppey, homestay alappuzha, kerala homestay, backwater homestay"
+    }
+    </script>
 </head>
 
 <body>
@@ -1583,9 +1651,8 @@
                 <!-- Add hero-element delay-2 to title -->
                 <h1
                     class="hero-element delay-2 hero-text text-6xl md:text-7xl font-black text-white mb-8 leading-tight">
-                    Experience the
-                    <span class="text-gradient">Backwaters</span>
-                    <br>of Alleppey
+                    <span class="text-gradient">Homestay & Houseboat</span>
+                    <br>in Alleppey (Alappuzha)
                 </h1>
 
                 <!-- Add hero-element delay-3 to description -->

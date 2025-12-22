@@ -750,6 +750,69 @@
             }
         }
     </style>
+
+    <!-- Houseboat Service Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TouristAttraction",
+        "name": "Alleppey Homes Houseboat Cruises",
+        "image": "https://alleppeyhomes.com/houseboat.jpg",
+        "description": "Best houseboat cruise in Alleppey, Kerala. Experience the Alappuzha backwaters on a luxury traditional houseboat with fresh food, professional crew, and stunning views.",
+        "@id": "https://alleppeyhomes.com/houseboat.html",
+        "url": "https://alleppeyhomes.com/houseboat.html",
+        "telephone": "+919946021397",
+        "email": "homesalleppey@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Darul Hamdu, Avulukunnu P.O., South Aryad",
+            "addressLocality": "Alleppey",
+            "addressRegion": "Kerala",
+            "postalCode": "688006",
+            "addressCountry": "IN"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 9.4981,
+            "longitude": 76.3388
+        },
+        "touristType": [
+            "Families",
+            "Couples",
+            "Honeymooners",
+            "Groups"
+        ],
+        "availableLanguage": [
+            "English",
+            "Hindi",
+            "Malayalam"
+        ],
+        "isAccessibleForFree": false,
+        "keywords": "houseboat in alleppey, houseboat cruise alappuzha, best houseboat alleppey, kerala backwater cruise, luxury houseboat kerala"
+    }
+    </script>
+
+    <!-- Houseboat Product/Service Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Alleppey Houseboat Cruise",
+        "description": "Luxury houseboat cruise through the scenic Alleppey (Alappuzha) backwaters with traditional Kerala meals and professional crew.",
+        "image": "https://alleppeyhomes.com/houseboat.jpg",
+        "brand": {
+            "@type": "Brand",
+            "name": "Alleppey Homes"
+        },
+        "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "INR",
+            "availability": "https://schema.org/InStock",
+            "url": "https://alleppeyhomes.com/houseboat.html"
+        },
+        "category": "Houseboat Cruise"
+    }
+    </script>
 </head>
 
 <body>
@@ -810,8 +873,8 @@
 
             <h1
                 class="hero-element delay-2 text-6xl md:text-8xl font-black text-white mb-8 leading-tight drop-shadow-lg">
-                Backwater
-                <span class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Adventures</span>
+                Luxury <span class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Houseboat in Alleppey</span>
+                <br>Alappuzha Backwater Cruises
             </h1>
 
             <p

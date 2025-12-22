@@ -9,7 +9,6 @@ Disallow: /cgi-bin/
 Disallow: /admin/
 Disallow: /private/
 Disallow: /*?s=*
-Disallow: /blog/
 
 # Allow all bots to crawl main content
 Allow: /index.html

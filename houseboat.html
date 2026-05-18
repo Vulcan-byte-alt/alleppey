@@ -812,7 +812,7 @@
                     <a href="contact.html" class="navbar-link">Contact</a>
                 </div>
             </div>
-            <button class="navbar-cta">Book Experience</button>
+            <button class="navbar-cta" onclick="document.getElementById('contact-modal').classList.remove('hidden')">Book Experience</button>
             <div class="hamburger md:hidden" id="hamburger">
                 <span></span>
                 <span></span>
@@ -855,22 +855,33 @@
                 class="hero-element delay-3 text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto font-light leading-relaxed drop-shadow-md">
                 Day cruises from ₹7,500 · Overnight stays available · Deluxe, Premium &amp; Luxury Kettuvallam houseboats with all meals — transparent pricing, direct booking
             </p>
-            <div class="hero-element delay-4 mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 flex-wrap">
-                <a id="hero-call-btn-1" href="#" class="inline-flex items-center gap-3 bg-green-500 hover:bg-green-400 text-white font-bold px-7 py-4 rounded-full text-base shadow-lg transition-all duration-300 hover:scale-105">
+            <div class="hero-element delay-4 mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <button onclick="document.getElementById('contact-modal').classList.remove('hidden')"
+                    class="inline-flex items-center gap-3 bg-green-500 hover:bg-green-400 text-white font-bold px-8 py-4 rounded-full text-lg shadow-lg transition-all duration-300 hover:scale-105">
                     <i class="fas fa-phone"></i>
-                    <span class="phone-display font-mono"></span>
-                </a>
-                <a id="hero-call-btn-2" href="#" class="inline-flex items-center gap-3 bg-green-500 hover:bg-green-400 text-white font-bold px-7 py-4 rounded-full text-base shadow-lg transition-all duration-300 hover:scale-105">
-                    <i class="fas fa-phone"></i>
-                    <span class="phone-display font-mono"></span>
-                </a>
-                <a href="#gallery" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white font-semibold px-7 py-4 rounded-full text-base transition-all duration-300">
+                    Contact Us
+                </button>
+                <a href="#gallery" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300">
                     <i class="fas fa-images"></i>
                     View Gallery
                 </a>
             </div>
         </div>
     </section>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="document.getElementById('contact-modal').classList.add('hidden')"></div>
+        <div class="relative bg-gray-900 border border-white/10 rounded-2xl p-8 max-w-sm w-full shadow-2xl">
+            <button onclick="document.getElementById('contact-modal').classList.add('hidden')"
+                class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl transition-colors">
+                <i class="fas fa-times"></i>
+            </button>
+            <h3 class="text-2xl font-bold text-white mb-2 text-center">Get in Touch</h3>
+            <p class="text-gray-400 text-sm text-center mb-6">Call or WhatsApp us to book your houseboat</p>
+            <div class="space-y-3" id="contact-modal-numbers"></div>
+        </div>
+    </div>
 
     <!-- Gallery Section -->
     <section class="py-20 bg-soft-black relative">
@@ -1120,10 +1131,10 @@
                         </div>
 
                         <div class="flex gap-3">
-                            <a href="index.html#contact"
-                                class="flex-1 bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-xl transition-all duration-300 block text-center no-underline">
+                            <button onclick="document.getElementById('contact-modal').classList.remove('hidden')"
+                                class="flex-1 bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-xl transition-all duration-300 block text-center">
                                 Book Now
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -1178,9 +1189,9 @@
                         </div>
 
                         <div class="flex gap-3">
-                            <a href="index.html#contact"
-                                class="flex-1 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 rounded-xl transition-all duration-300 inline-block text-center no-underline">
-                                Book Now </a>
+                            <button onclick="document.getElementById('contact-modal').classList.remove('hidden')"
+                                class="flex-1 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 rounded-xl transition-all duration-300 block text-center">
+                                Book Now</button>
                         </div>
                     </div>
                 </div>
@@ -1231,10 +1242,10 @@
                         </div>
 
                         <div class="flex gap-3">
-                            <a href="index.html#contact"
-                                class="flex-1 bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-4 rounded-xl transition-all duration-300 inline-block text-center no-underline">
+                            <button onclick="document.getElementById('contact-modal').classList.remove('hidden')"
+                                class="flex-1 bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-4 rounded-xl transition-all duration-300 block text-center">
                                 Book Now
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -1974,10 +1985,10 @@
                     <div
                         class="mt-8 p-4 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-xl border border-blue-400/30">
                         <p class="text-center text-white font-bold mb-2">Still in Doubt?</p>
-                        <a href="index.html#contact"
-                            class="w-full bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 block text-center no-underline">
+                        <button onclick="document.getElementById('contact-modal').classList.remove('hidden')"
+                            class="w-full bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 block text-center">
                             Contact Us
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -3008,15 +3019,32 @@
         // Phone numbers assembled at runtime — not stored as plaintext in HTML
         (function() {
             const phones = [
-                { id: 'hero-call-btn-1', parts: ['+91', '9947', '048197'] },
-                { id: 'hero-call-btn-2', parts: ['+91', '9633', '747715'] }
+                ['+91', '9947', '048197'],
+                ['+91', '9633', '747715']
             ];
-            phones.forEach(function(p) {
-                const btn = document.getElementById(p.id);
-                if (btn) {
-                    btn.href = 'tel:' + p.parts.join('');
-                    btn.querySelector('.phone-display').textContent = p.parts.join('-');
-                }
+            const container = document.getElementById('contact-modal-numbers');
+            if (!container) return;
+            phones.forEach(function(parts) {
+                const num = parts.join('-');
+                const tel = 'tel:' + parts.join('');
+                const wa = 'https://wa.me/' + parts.join('').replace('+', '');
+                container.innerHTML += `
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-4">
+                        <div class="text-white font-mono text-center text-lg font-bold mb-3">${num}</div>
+                        <div class="flex gap-2">
+                            <a href="${tel}" class="flex-1 flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white font-semibold py-2 rounded-lg transition-colors text-sm">
+                                <i class="fas fa-phone"></i> Call
+                            </a>
+                            <a href="${wa}" target="_blank" rel="noopener" class="flex-1 flex items-center justify-center gap-2 bg-emerald-700 hover:bg-emerald-600 text-white font-semibold py-2 rounded-lg transition-colors text-sm">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                        </div>
+                    </div>`;
+            });
+
+            // Close modal on Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') document.getElementById('contact-modal').classList.add('hidden');
             });
         })();
     </script>

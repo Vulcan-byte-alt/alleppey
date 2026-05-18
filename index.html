@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO Meta Tags - ENHANCED FOR RANKING -->
-    <title>Best Kerala Homestay & Houseboat Experience in Alleppey (Alappuzha) Backwaters | Alleppey Homes</title>
+    <title>Homestay & Houseboat in Alleppey (Alappuzha), Kerala | Alleppey Homes</title>
     <meta name="description"
-        content="Experience the best authentic Kerala homestay & luxury houseboat cruises in the Alleppey (Alappuzha) backwaters. Enjoy traditional accommodation, local food, and cultural tours. Book your perfect backwater holiday in God's Own Country today!">
+        content="Family-run homestay & houseboat bookings in Alleppey (Alappuzha), Kerala. Direct booking, no OTA markup. Day cruise from ₹7,500 · Overnight stays · AC & Non-AC rooms with home-cooked Kerala meals.">
     <meta name="keywords"
         content="Kerala homestay, Alleppey homestay, Alappuzha homestay, homestay in Alleppey, homestays in Alappuzha, backwater homestay Kerala, houseboat in Alleppey, houseboat cruise Alappuzha, best houseboat Alleppey, Kerala tourism, Alleppey tourism, backwater holidays, luxury houseboat Kerala, Kerala cultural experience, backwater resort Alleppey, God's own country, Kerala travel, Kumarakom homestay, backwater village stay, Kerala family homestay, authentic Kerala experience, South India tourism, Alappuzha boat house, Kerala holiday packages, Alleppey backwaters, Alappuzha backwaters, FAQ Kerala travel, Kerala travel questions, backwater cruise FAQ">
     <meta name="author" content="Alleppey Homes">
@@ -34,7 +34,7 @@
     <!-- Open Graph Tags for Facebook (Refined) -->
     <meta property="og:site_name" content="Alleppey Homes">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Best Kerala Homestay & Houseboat Experience in Alleppey (Alappuzha) Backwaters">
+    <meta property="og:title" content="Homestay & Houseboat in Alleppey (Alappuzha), Kerala | Alleppey Homes">
     <meta property="og:description"
         content="Discover the best homestay and houseboat experience in the Alleppey backwaters. Authentic Kerala culture, cuisine, and luxury cruises in God's Own Country.">
     <meta property="og:url" content="https://alleppeyhomes.com/">
@@ -57,7 +57,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@alleppeyhomes">
     <meta name="twitter:creator" content="@alleppeyhomes">
-    <meta name="twitter:title" content="Best Homestay & Houseboat in Alleppey Backwaters | Alleppey Homes">
+    <meta name="twitter:title" content="Homestay & Houseboat in Alleppey (Alappuzha), Kerala | Alleppey Homes">
     <meta name="twitter:description"
         content="Experience authentic Kerala homestay & luxury houseboat cruises in the Alleppey (Alappuzha) backwaters. Book your perfect backwater holiday.">
     <meta name="twitter:image" content="https://alleppeyhomes.com/hero.png">
@@ -160,8 +160,8 @@
                 ],
                 "aggregateRating": {
                     "@type": "AggregateRating",
-                    "ratingValue": "4.9",
-                    "reviewCount": "512",
+                    "ratingValue": "4.8",
+                    "reviewCount": "47",
                     "bestRating": "5"
                 },
                 "review": [
@@ -295,36 +295,7 @@
     }
     </script>
 
-    <!-- The rest of your head section remains the same -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'neon-green': '#00ff88',
-                        'dark-green': '#10b981',
-                        'electric-green': '#22c55e',
-                        'deep-black': '#0a0a0a',
-                        'soft-black': '#1a1a1a',
-                        'light-gray': '#f8fafc',
-                        'border-gray': '#2a2a2a',
-                        'glass-white': 'rgba(255, 255, 255, 0.1)',
-                        'glass-green': 'rgba(0, 255, 136, 0.1)',
-                        'glass-dark': 'rgba(26, 26, 26, 0.8)'
-                    },
-                    fontFamily: {
-                        'sans': ['Source Sans Pro', 'system-ui', 'sans-serif'],
-                        'serif': ['Playfair Display', 'serif'],
-                        'display': ['Playfair Display', 'serif']
-                    },
-                    backdropBlur: {
-                        'xs': '2px',
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="tailwind.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
@@ -1614,7 +1585,7 @@
                     <a href="contact.html" class="navbar-link">Contact</a>
                 </div>
             </div>
-            <button class="navbar-cta">Book Experience</button>
+            <button class="navbar-cta" onclick="document.getElementById('contact-modal').classList.remove('hidden')">Book Experience</button>
             <div class="hamburger md:hidden" id="hamburger">
                 <span></span>
                 <span></span>
@@ -1643,7 +1614,7 @@
 
                 <!-- Add hero-element delay-2 to title -->
                 <h1
-                    class="hero-element delay-2 hero-text text-6xl md:text-7xl font-black text-white mb-8 leading-tight">
+                    class="hero-element delay-2 hero-text text-4xl md:text-6xl font-bold text-white mb-8 leading-tight">
                     <span class="text-gradient">Homestay & Houseboat</span>
                     <br>in Alleppey (Alappuzha)
                 </h1>
@@ -1657,10 +1628,10 @@
 
                 <!-- Add hero-element delay-4 to buttons -->
                 <div class="hero-element delay-4 flex flex-col sm:flex-row gap-6 justify-center">
-                    <a href="#contact"
+                    <button onclick="document.getElementById('contact-modal').classList.remove('hidden')"
                         class="btn-primary px-8 py-4 rounded-xl text-lg font-semibold transform hover:scale-105">
                         Book Your Experience
-                    </a>
+                    </button>
                     <a href="#gallery" class="btn-outline px-8 py-4 rounded-xl text-lg font-semibold">
                         Watch our Gallery
                     </a>
@@ -1944,11 +1915,7 @@
                     <h3 class="text-3xl font-black text-white mb-6">Traditional Homestay
                         Experience</h3>
                     <p class="text-gray-400 mb-8 leading-relaxed font-light">
-                        Immerse yourself in authentic Kerala hospitality with our luxury
-                        homestay. Experience
-                        traditional architecture enhanced with modern amenities, gourmet local
-                        cuisine, and personalized
-                        service that makes you feel at home.
+                        Immerse yourself in authentic Kerala hospitality with our <a href="homestay.html" class="text-neon-green hover:text-green-300 underline underline-offset-2">homestay in Alleppey</a>. Traditional architecture with modern amenities, home-cooked Kerala meals, and personalized service that makes you feel at home in Alappuzha.
                     </p>
                     <div class="space-y-4 mb-8">
                         <div class="flex items-center text-gray-300">
@@ -1983,11 +1950,7 @@
                     </div>
                     <h3 class="text-3xl font-black text-white mb-6">Backwater Luxury Cruise</h3>
                     <p class="text-gray-400 mb-8 leading-relaxed font-light">
-                        Navigate Kerala's pristine backwaters aboard our luxury houseboats.
-                        Experience the tranquil
-                        waterways with premium accommodations, gourmet dining, and expert local
-                        guides who bring the
-                        region's stories to life.
+                        Navigate Kerala's pristine backwaters aboard our <a href="houseboat.html" class="text-neon-green hover:text-green-300 underline underline-offset-2">luxury houseboats in Alleppey</a>. Experience the tranquil waterways with premium accommodations, gourmet dining, and expert local guides. <a href="houseboat.html" class="text-neon-green hover:text-green-300 underline underline-offset-2">Day cruises from ₹7,500</a> — overnight stays available.
                     </p>
                     <div class="space-y-4 mb-8">
                         <div class="flex items-center text-gray-300">
@@ -2395,10 +2358,10 @@
                             <div class="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>Local area guidance
                         </li>
                     </ul>
-                    <a href="#contact"
-                        class="w-full btn-outline border-2 border-blue-400 text-blue-400 px-6 py-3 rounded-xl font-semibold hover:bg-blue-400 hover:text-black transition-all duration-300 block text-center no-underline">
+                    <button onclick="document.getElementById('contact-modal').classList.remove('hidden')"
+                        class="w-full btn-outline border-2 border-blue-400 text-blue-400 px-6 py-3 rounded-xl font-semibold hover:bg-blue-400 hover:text-black transition-all duration-300 block text-center">
                         Book Non-AC Stay
-                    </a>
+                    </button>
                 </div>
 
                 <!-- AC Homestay Experience - Most Popular -->
@@ -2435,10 +2398,10 @@
                             <div class="w-2 h-2 bg-neon-green rounded-full mr-3"></div>Airport transfers
                         </li>
                     </ul>
-                    <a href="#contact"
-                        class="w-full btn-primary px-6 py-3 rounded-xl font-semibold block text-center no-underline">
+                    <button onclick="document.getElementById('contact-modal').classList.remove('hidden')"
+                        class="w-full btn-primary px-6 py-3 rounded-xl font-semibold block text-center">
                         Book AC Homestay
-                    </a>
+                    </button>
                 </div>
 
                 <!-- Houseboat Experience Plan -->
@@ -2771,10 +2734,10 @@
                         experience.
                         Get in touch with our team for personalized assistance.</p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="#contact"
+                        <button onclick="document.getElementById('contact-modal').classList.remove('hidden')"
                             class="btn-primary px-8 py-3 rounded-xl font-semibold hover:scale-105 transition-transform inline-block text-center">
                             Contact Us
-                        </a>
+                        </button>
                         <a href="https://wa.me/919947048197"
                             class="btn-outline border-2 border-green-400 text-green-400 px-8 py-3 rounded-xl font-semibold hover:bg-green-400 hover:text-black transition-all duration-300 inline-block text-center">
                             <i class="fab fa-whatsapp mr-2"></i>WhatsApp
@@ -4417,7 +4380,51 @@
         });
 
         console.log('🏝️ Alleppey Backwaters website loaded successfully with enhanced styling!');
+
+        // Phone numbers assembled at runtime — not stored as plaintext in HTML
+        (function() {
+            const phones = [
+                ['+91', '9947', '048197'],
+                ['+91', '9633', '747715']
+            ];
+            const container = document.getElementById('contact-modal-numbers');
+            if (!container) return;
+            phones.forEach(function(parts) {
+                const num = parts.join('-');
+                const tel = 'tel:' + parts.join('');
+                const wa = 'https://wa.me/' + parts.join('').replace('+', '');
+                container.innerHTML += `
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-4">
+                        <div class="text-white font-mono text-center text-lg font-bold mb-3">${num}</div>
+                        <div class="flex gap-2">
+                            <a href="${tel}" class="flex-1 flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white font-semibold py-2 rounded-lg transition-colors text-sm">
+                                <i class="fas fa-phone"></i> Call
+                            </a>
+                            <a href="${wa}" target="_blank" rel="noopener" class="flex-1 flex items-center justify-center gap-2 bg-emerald-700 hover:bg-emerald-600 text-white font-semibold py-2 rounded-lg transition-colors text-sm">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                        </div>
+                    </div>`;
+            });
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') document.getElementById('contact-modal').classList.add('hidden');
+            });
+        })();
     </script>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="document.getElementById('contact-modal').classList.add('hidden')"></div>
+        <div class="relative bg-gray-900 border border-white/10 rounded-2xl p-8 max-w-sm w-full shadow-2xl">
+            <button onclick="document.getElementById('contact-modal').classList.add('hidden')"
+                class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl transition-colors">
+                <i class="fas fa-times"></i>
+            </button>
+            <h3 class="text-2xl font-bold text-white mb-2 text-center">Get in Touch</h3>
+            <p class="text-gray-400 text-sm text-center mb-6">Call or WhatsApp us to book your experience</p>
+            <div class="space-y-3" id="contact-modal-numbers"></div>
+        </div>
+    </div>
 
 </body>
 

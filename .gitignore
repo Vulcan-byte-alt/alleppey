@@ -1,6 +1,10 @@
 # Claude Code local settings
 .claude/settings.local.json
 
+# npm / Node
+node_modules/
+tailwind.input.css
+
 # OS generated files
 .DS_Store
 .DS_Store?

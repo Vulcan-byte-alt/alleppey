@@ -4380,7 +4380,23 @@
         });
 
         console.log('🏝️ Alleppey Backwaters website loaded successfully with enhanced styling!');
+    </script>
 
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="document.getElementById('contact-modal').classList.add('hidden')"></div>
+        <div class="relative bg-gray-900 border border-white/10 rounded-2xl p-8 max-w-sm w-full shadow-2xl">
+            <button onclick="document.getElementById('contact-modal').classList.add('hidden')"
+                class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl transition-colors">
+                <i class="fas fa-times"></i>
+            </button>
+            <h3 class="text-2xl font-bold text-white mb-2 text-center">Get in Touch</h3>
+            <p class="text-gray-400 text-sm text-center mb-6">Call or WhatsApp us to book your experience</p>
+            <div class="space-y-3" id="contact-modal-numbers"></div>
+        </div>
+    </div>
+
+    <script>
         // Phone numbers assembled at runtime — not stored as plaintext in HTML
         (function() {
             const phones = [
@@ -4411,20 +4427,6 @@
             });
         })();
     </script>
-
-    <!-- Contact Modal -->
-    <div id="contact-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
-        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="document.getElementById('contact-modal').classList.add('hidden')"></div>
-        <div class="relative bg-gray-900 border border-white/10 rounded-2xl p-8 max-w-sm w-full shadow-2xl">
-            <button onclick="document.getElementById('contact-modal').classList.add('hidden')"
-                class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl transition-colors">
-                <i class="fas fa-times"></i>
-            </button>
-            <h3 class="text-2xl font-bold text-white mb-2 text-center">Get in Touch</h3>
-            <p class="text-gray-400 text-sm text-center mb-6">Call or WhatsApp us to book your experience</p>
-            <div class="space-y-3" id="contact-modal-numbers"></div>
-        </div>
-    </div>
 
 </body>
 

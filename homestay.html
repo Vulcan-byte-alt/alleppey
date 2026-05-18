@@ -360,12 +360,16 @@
 
         .hero-section {
             min-height: 100vh;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 30%, #0a0a0a 60%, #1a1a1a 100%);
+            background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)), url('home.jpg') center/cover no-repeat;
             position: relative;
             overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+
+        .hero-section.no-photo {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 30%, #0a0a0a 60%, #1a1a1a 100%);
         }
 
         .hero-section::before {
@@ -934,22 +938,33 @@
             <div
                 class="hero-element delay-1 inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-full mb-8 shadow-lg">
                 <div class="w-3 h-3 bg-green-400 rounded-full mr-3 animate-pulse"></div>
-                <span class="text-white text-sm font-bold tracking-wider uppercase">Homestay Gallery</span>
-                <div class="w-3 h-3 bg-emerald-400 rounded-full ml-3 animate-pulse" style="animation-delay: 0.5s;">
-                </div>
+                <span class="text-white text-sm font-bold tracking-wider uppercase">Alleppey · Alappuzha, Kerala</span>
+                <div class="w-3 h-3 bg-emerald-400 rounded-full ml-3 animate-pulse" style="animation-delay: 0.5s;"></div>
             </div>
 
             <h1
-                class="hero-element delay-2 text-6xl md:text-8xl font-black text-white mb-8 leading-tight drop-shadow-lg">
+                class="hero-element delay-2 text-4xl md:text-6xl font-bold text-white mb-8 leading-tight drop-shadow-lg">
                 Best <span class="bg-gradient-to-r from-neon-green to-electric-green bg-clip-text text-transparent">Homestay in Alleppey</span>
-                <br>Authentic Alappuzha Experience
+                <br>(Alappuzha) Kerala — 2026
             </h1>
 
             <p
                 class="hero-element delay-3 text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto font-light leading-relaxed drop-shadow-md">
-                Discover the authentic charm of our family homestay through these glimpses of comfortable rooms, shared
-                spaces, and the warm atmosphere that awaits you
+                Family-run backwater homestay · AC &amp; Non-AC rooms · Home-cooked Kerala meals · Direct booking, no OTA markup
             </p>
+
+            <div class="hero-element delay-4 flex flex-col sm:flex-row gap-4 justify-center mt-10">
+                <button onclick="document.getElementById('contact-modal').classList.remove('hidden')"
+                    class="inline-flex items-center gap-3 bg-green-500 hover:bg-green-400 text-white font-bold px-8 py-4 rounded-full text-lg shadow-lg transition-all duration-300 hover:scale-105">
+                    <i class="fas fa-phone"></i>
+                    Contact Us
+                </button>
+                <a href="#rooms"
+                    class="inline-flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold px-8 py-4 rounded-full text-lg border border-white/30 backdrop-blur-sm transition-all duration-300 hover:scale-105">
+                    <i class="fas fa-bed"></i>
+                    View Rooms
+                </a>
+            </div>
         </div>
     </section>
 
@@ -1050,7 +1065,7 @@
     </section>
 
     <!-- Homestay Options Section -->
-    <section class="py-20 bg-gradient-to-b from-deep-black to-soft-black relative">
+    <section id="rooms" class="py-20 bg-gradient-to-b from-deep-black to-soft-black relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">

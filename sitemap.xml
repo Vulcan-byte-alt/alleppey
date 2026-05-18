@@ -218,6 +218,27 @@
         <priority>0.6</priority>
     </url>
 
+    <url>
+        <loc>https://alleppeyhomes.com/blog-best-time-alleppey-houseboat.html</loc>
+        <lastmod>2026-05-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://alleppeyhomes.com/blog-alleppey-homestay-with-food.html</loc>
+        <lastmod>2026-05-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://alleppeyhomes.com/blog-day-cruise-vs-overnight-alleppey.html</loc>
+        <lastmod>2026-05-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
     <!-- FAQ Page -->
     <url>
         <loc>https://alleppeyhomes.com/faq.html</loc>

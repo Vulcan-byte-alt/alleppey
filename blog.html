@@ -1,130 +1,255 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="https://schema.org/Blog">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Kerala Travel Blog - Alleppey Backwaters Guide | Alleppey Homes</title>
-    <meta name="description" content="Read our Kerala travel blog for insider tips on Alleppey backwaters, homestays, houseboats, local food, and cultural experiences. Your complete guide to God's Own Country.">
-    <meta name="keywords" content="Kerala blog, Alleppey travel blog, backwaters guide, Kerala travel tips, Alleppey tourism blog, houseboat travel guide">
+    <title>Kerala Travel Blog — Alleppey Backwaters Guide | Alleppey Homes</title>
+    <meta name="description" content="Kerala travel tips, houseboat guides, and homestay advice from the Alleppey Homes team. Insider knowledge on the Alappuzha backwaters, best seasons, food, and more.">
     <meta name="robots" content="index, follow">
-
     <link rel="canonical" href="https://alleppeyhomes.com/blog.html">
+
+    <meta property="og:site_name" content="Alleppey Homes">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Kerala Travel Blog | Alleppey Homes">
+    <meta property="og:description" content="Insider tips, houseboat guides, and homestay advice from the Alleppey backwaters.">
+    <meta property="og:url" content="https://alleppeyhomes.com/blog.html">
+    <meta property="og:image" content="https://alleppeyhomes.com/houseboat_hero.jpg">
+    <meta property="og:locale" content="en_IN">
+
     <link rel="icon" href="logo.png" type="image/x-icon">
     <meta name="theme-color" content="#00ff88">
 
-    <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4DEB85PM0H"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-4DEB85PM0H');
+        gtag('config', 'G-4DEB85PM0H', { 'send_page_view': true, 'anonymize_ip': true });
     </script>
+
+    <link rel="stylesheet" href="tailwind.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Source+Sans+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
-            color: white;
-            line-height: 1.6;
-        }
-        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
-        .back-link {
-            display: inline-block;
-            margin: 2rem 0;
-            padding: 0.75rem 1.5rem;
-            background: linear-gradient(135deg, #00ff88, #22c55e);
-            color: #0a0a0a;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-        }
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #00ff88, #22c55e);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-        .blog-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(0, 255, 136, 0.2);
-            border-radius: 16px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-        .blog-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(0, 255, 136, 0.5);
-            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.2);
-        }
-        .blog-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        .blog-content {
-            padding: 1.5rem;
-        }
-        .blog-content h3 {
-            color: #00ff88;
-            margin-bottom: 0.5rem;
-            font-size: 1.4rem;
-        }
-        .blog-meta {
-            color: rgba(255,255,255,0.6);
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-        .blog-content p {
-            color: rgba(255,255,255,0.8);
-            margin-bottom: 1rem;
-        }
-        .read-more {
-            display: inline-block;
-            padding: 0.75rem 1.5rem;
-            background: linear-gradient(135deg, #00ff88, #22c55e);
-            color: #0a0a0a;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-        }
+        h1,h2,h3,h4,h5,h6 { font-family: 'Playfair Display', serif; font-weight: 700; letter-spacing: 0.01em; }
+        body { font-family: 'Source Sans Pro', sans-serif; background: #0a0a0a; color: white; }
+
+        .navbar { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; padding: 2rem; transition: all 0.4s cubic-bezier(0.25,0.46,0.45,0.94); }
+        .navbar.scrolled { padding: 1rem 2rem; }
+        .navbar.scrolled .navbar-container { background: rgba(10,10,10,0.9); border: 1px solid rgba(0,255,136,0.1); backdrop-filter: blur(25px); border-radius: 100px; padding: 0.75rem 2rem; box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
+        .navbar-container { display: flex; justify-content: space-between; align-items: center; max-width: 1400px; margin: 0 auto; border: 1px solid transparent; transition: all 0.4s ease; }
+        .navbar-logo { font-weight: 800; font-size: 1.5rem; color: white; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; font-family: 'Playfair Display', serif; letter-spacing: -0.02em; }
+        .navbar-menu { display: flex; gap: 2rem; align-items: center; }
+        .navbar-link { color: rgba(255,255,255,0.7); text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: all 0.2s ease; padding: 0.5rem 1rem; border-radius: 8px; }
+        .navbar-link:hover, .navbar-link.active { color: #00ff88; }
+        .navbar-link:hover { background: rgba(0,255,136,0.05); transform: translateY(-1px); }
+        .navbar-cta { background: linear-gradient(135deg,#00ff88,#22c55e); color: #0a0a0a; border: none; padding: 0.75rem 1.5rem; font-weight: 600; font-size: 0.9rem; border-radius: 50px; cursor: pointer; transition: all 0.2s ease; }
+        .navbar-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 25px rgba(0,255,136,0.3); }
+        .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; padding: 0.5rem; border-radius: 8px; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; transition: all 0.3s ease; }
+        .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .hamburger.open span:nth-child(2) { opacity: 0; }
+        .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+        .mobile-menu { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10,10,10,0.98); z-index: 999; flex-direction: column; align-items: center; justify-content: center; gap: 2rem; }
+        .mobile-menu.open { display: flex; }
+        .mobile-menu a { color: white; text-decoration: none; font-size: 2rem; font-family: 'Playfair Display', serif; font-weight: 700; transition: color 0.2s ease; }
+        .mobile-menu a:hover { color: #00ff88; }
+        .section-divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(0,255,136,0.3), transparent); }
+        .blog-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 1.5rem; overflow: hidden; transition: all 0.3s ease; }
+        .blog-card:hover { transform: translateY(-6px); border-color: rgba(0,255,136,0.25); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+        .blog-card img { width: 100%; height: 220px; object-fit: cover; display: block; }
+        .tag { display: inline-block; padding: 0.25rem 0.75rem; background: rgba(0,255,136,0.1); color: #00ff88; border-radius: 999px; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 0.75rem; }
+        @media (max-width: 768px) { .navbar-menu, .navbar-cta { display: none; } }
+        @media (min-width: 769px) { .hamburger { display: none; } }
     </style>
 </head>
 <body>
-    <div class="container">
-        <a href="/" class="back-link">← Back to Home</a>
 
-        <h1>Kerala Travel Blog</h1>
-        <p style="color: rgba(255,255,255,0.7); margin-bottom: 3rem; font-size: 1.1rem;">Insider tips, travel guides, and stories from Alleppey backwaters</p>
-
-        <div class="blog-grid">
-            <div class="blog-card">
-                <img src="gallery1.png" alt="Top Things to Do in Alleppey">
-                <div class="blog-content">
-                    <h3>Top 10 Things to Do in Alleppey</h3>
-                    <div class="blog-meta">📅 October 25, 2025 | ⏱️ 8 min read</div>
-                    <p>Discover the best activities and experiences in Alleppey, from houseboat cruises to village tours, cultural shows, and authentic Kerala cuisine...</p>
-                    <a href="blog-top-10-things-alleppey.html" class="read-more">Read More →</a>
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <div class="flex items-center">
+                <img src="logo.png" alt="Alleppey Homes Logo" class="h-12 w-12 object-contain mb-3" />
+                <span class="navbar-logo ml-1">Alleppey Homes</span>
+            </div>
+            <div class="navbar-menu hidden md:block">
+                <div class="ml-10 flex items-baseline space-x-8">
+                    <a href="/" class="navbar-link">Home</a>
+                    <a href="homestay.html" class="navbar-link">Homestay</a>
+                    <a href="houseboat.html" class="navbar-link">Houseboat</a>
+                    <a href="index.html#plans" class="navbar-link">Packages</a>
+                    <a href="contact.html" class="navbar-link">Contact</a>
                 </div>
             </div>
+            <button class="navbar-cta" onclick="document.getElementById('contact-modal').classList.remove('hidden')">Book Experience</button>
+            <div class="hamburger md:hidden" id="hamburger"><span></span><span></span><span></span></div>
         </div>
+    </nav>
 
-        <p style="color: rgba(255,255,255,0.6); text-align: center; margin-top: 2rem; font-style: italic;">
-            More travel guides and stories coming soon! Stay tuned for insider tips on Kerala backwaters, local cuisine, and cultural experiences.
-        </p>
-
-        <p style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
-            <a href="/" style="color: #00ff88; text-decoration: none;">← Return to Homepage</a>
-        </p>
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="homestay.html">Homestay</a>
+        <a href="houseboat.html">Houseboat</a>
+        <a href="index.html#plans">Packages</a>
+        <a href="contact.html">Contact</a>
     </div>
+
+    <!-- Hero -->
+    <section style="min-height:50vh; background: linear-gradient(135deg,#0a0a0a 0%,#0d1117 40%,#0a1628 70%,#050d1a 100%); display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden;">
+        <div style="position:absolute;inset:0;background-image:radial-gradient(circle at 20% 70%, rgba(0,255,136,0.06) 0%,transparent 40%),radial-gradient(circle at 80% 30%,rgba(34,197,94,0.04) 0%,transparent 40%);"></div>
+        <div class="max-w-3xl mx-auto px-4 text-center relative z-10 pt-24 pb-12">
+            <div class="inline-flex items-center px-6 py-3 bg-white/5 backdrop-blur-md border border-white/10 rounded-full mb-8">
+                <div class="w-2.5 h-2.5 bg-green-400 rounded-full mr-3 animate-pulse"></div>
+                <span class="text-white text-sm font-semibold tracking-wider uppercase">Alleppey · Kerala Travel Guides</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                The <span class="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Alleppey Homes</span> Blog
+            </h1>
+            <p class="text-xl text-gray-300 font-light leading-relaxed">Honest guides to Kerala's backwaters — houseboat tips, homestay advice, and local knowledge from people who actually live here.</p>
+        </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="py-20 bg-soft-black">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <a href="blog-top-10-things-alleppey.html" class="blog-card block no-underline">
+                    <img src="gallery3.jpg" alt="Top 10 things to do in Alleppey Alappuzha Kerala" loading="lazy">
+                    <div class="p-6">
+                        <span class="tag">Travel Guide</span>
+                        <h2 class="text-xl font-bold text-white mb-2 leading-snug">Top 10 Things to Do in Alleppey (2026 Complete Guide)</h2>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4">From houseboat cruises on the backwaters to canoe rides, Kathakali performances, and the Nehru Trophy race — the best Alleppey experiences with practical tips.</p>
+                        <div class="flex items-center justify-between text-xs text-gray-500">
+                            <span><i class="far fa-calendar mr-1"></i> May 18, 2026</span>
+                            <span><i class="far fa-clock mr-1"></i> 8 min read</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="blog-best-time-alleppey-houseboat.html" class="blog-card block no-underline">
+                    <img src="houseboat_hero.jpg" alt="Best time to visit Alleppey for houseboat cruise season" loading="lazy">
+                    <div class="p-6">
+                        <span class="tag">Houseboat Guide</span>
+                        <h2 class="text-xl font-bold text-white mb-2 leading-snug">Best Time to Visit Alleppey for a Houseboat Experience</h2>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4">Peak season, monsoon magic, Christmas surcharges, and summer deals — an honest month-by-month breakdown of when to book your Alleppey backwater cruise.</p>
+                        <div class="flex items-center justify-between text-xs text-gray-500">
+                            <span><i class="far fa-calendar mr-1"></i> May 18, 2026</span>
+                            <span><i class="far fa-clock mr-1"></i> 6 min read</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="blog-alleppey-homestay-with-food.html" class="blog-card block no-underline">
+                    <img src="home.jpg" alt="Alleppey homestay with food included Kerala meals" loading="lazy">
+                    <div class="p-6">
+                        <span class="tag">Homestay Guide</span>
+                        <h2 class="text-xl font-bold text-white mb-2 leading-snug">Alleppey Homestay With Food Included — What to Expect at a Kerala Table</h2>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4">Appam, fish curry, puttu, and three-generation recipes — what staying at a family homestay in Alappuzha with meals included actually looks like.</p>
+                        <div class="flex items-center justify-between text-xs text-gray-500">
+                            <span><i class="far fa-calendar mr-1"></i> May 18, 2026</span>
+                            <span><i class="far fa-clock mr-1"></i> 5 min read</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="blog-day-cruise-vs-overnight-alleppey.html" class="blog-card block no-underline">
+                    <img src="houseboat.jpg" alt="Day cruise vs overnight houseboat Alleppey comparison" loading="lazy">
+                    <div class="p-6">
+                        <span class="tag">Houseboat Guide</span>
+                        <h2 class="text-xl font-bold text-white mb-2 leading-snug">Day Cruise vs Overnight Houseboat in Alleppey — Which Is Right for You?</h2>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4">5 hours from ₹7,500 vs 21 hours from ₹12,000 — a side-by-side comparison of cost, experience, and which option suits your travel style.</p>
+                        <div class="flex items-center justify-between text-xs text-gray-500">
+                            <span><i class="far fa-calendar mr-1"></i> May 18, 2026</span>
+                            <span><i class="far fa-clock mr-1"></i> 6 min read</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-deep-black text-white py-16 border-t border-border-gray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <img src="logo.png" alt="Alleppey Homes" class="h-12 w-12 object-contain" />
+                        <span class="navbar-logo ml-1 text-2xl">Alleppey Homes</span>
+                    </div>
+                    <p class="text-gray-400 mb-8 max-w-md leading-relaxed font-light">Creating magical memories in Kerala's pristine backwaters. Where every sunrise brings new adventures and every sunset paints unforgettable moments.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-neon-green transition duration-300 text-lg"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/alleppey_homes_/" class="text-gray-400 hover:text-neon-green transition duration-300 text-lg"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/919947048197" class="text-gray-400 hover:text-neon-green transition duration-300 text-lg"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.youtube.com/channel/UC6WuM9vWr9iR7FOfyq1xXtg" class="text-gray-400 hover:text-neon-green transition duration-300 text-lg"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 text-lg">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="/" class="text-gray-400 hover:text-neon-green transition duration-300 font-light">Home</a></li>
+                        <li><a href="homestay.html" class="text-gray-400 hover:text-neon-green transition duration-300 font-light">Homestay</a></li>
+                        <li><a href="houseboat.html" class="text-gray-400 hover:text-neon-green transition duration-300 font-light">Houseboat</a></li>
+                        <li><a href="index.html#plans" class="text-gray-400 hover:text-neon-green transition duration-300 font-light">Packages</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-neon-green transition duration-300 font-light">Blog</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-neon-green transition duration-300 font-light">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 text-lg">Legal & Info</h4>
+                    <ul class="space-y-3">
+                        <li><a href="privacy-policy.html" class="text-gray-400 hover:text-neon-green transition duration-300 font-light">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-neon-green transition duration-300 font-light">Terms & Conditions</a></li>
+                        <li><a href="index.html#faq" class="text-gray-400 hover:text-neon-green transition duration-300 font-light">FAQ</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-neon-green transition duration-300 font-light">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section-divider my-12"></div>
+            <div class="text-center text-gray-400 font-light">
+                <p>© 2026 Alleppey Homes. All rights reserved. Proudly serving travellers from around the world.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="document.getElementById('contact-modal').classList.add('hidden')"></div>
+        <div class="relative bg-gray-900 border border-white/10 rounded-2xl p-8 max-w-sm w-full shadow-2xl">
+            <button onclick="document.getElementById('contact-modal').classList.add('hidden')" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl transition-colors"><i class="fas fa-times"></i></button>
+            <h3 class="text-2xl font-bold text-white mb-2 text-center">Get in Touch</h3>
+            <p class="text-gray-400 text-sm text-center mb-6">Call or WhatsApp us to book your stay</p>
+            <div class="space-y-3" id="contact-modal-numbers"></div>
+        </div>
+    </div>
+
+    <script>
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+        hamburger.addEventListener('click', () => { hamburger.classList.toggle('open'); mobileMenu.classList.toggle('open'); });
+        mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { hamburger.classList.remove('open'); mobileMenu.classList.remove('open'); }));
+    </script>
+    <script>
+        (function() {
+            const phones = [['+91','9947','048197'],['+91','9633','747715']];
+            const container = document.getElementById('contact-modal-numbers');
+            if (!container) return;
+            phones.forEach(function(parts) {
+                const num = parts.join('-');
+                const tel = 'tel:' + parts.join('');
+                const wa = 'https://wa.me/' + parts.join('').replace('+','');
+                container.innerHTML += `<div class="bg-white/5 border border-white/10 rounded-xl p-4"><div class="text-white font-mono text-center text-lg font-bold mb-3">${num}</div><div class="flex gap-2"><a href="${tel}" class="flex-1 flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white font-semibold py-2 rounded-lg transition-colors text-sm"><i class="fas fa-phone"></i> Call</a><a href="${wa}" target="_blank" rel="noopener" class="flex-1 flex items-center justify-center gap-2 bg-emerald-700 hover:bg-emerald-600 text-white font-semibold py-2 rounded-lg transition-colors text-sm"><i class="fab fa-whatsapp"></i> WhatsApp</a></div></div>`;
+            });
+            document.addEventListener('keydown', function(e) { if (e.key === 'Escape') document.getElementById('contact-modal').classList.add('hidden'); });
+        })();
+    </script>
 </body>
 </html>

@@ -11,6 +11,9 @@
     # Force www to non-www (or vice versa)
     RewriteCond %{HTTP_HOST} ^www\.alleppeyhomes\.com [NC]
     RewriteRule ^(.*)$ https://alleppeyhomes.com/$1 [L,R=301]
+
+    # Redirect index.html to root — avoids duplicate URL in Search Console
+    RewriteRule ^index\.html$ https://alleppeyhomes.com/ [L,R=301]
 </IfModule>
 
 # GZIP Compression for faster loading

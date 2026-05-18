@@ -1,0 +1,2 @@
+# Netlify redirects — redirect index.html to root to avoid duplicate URL in Google Search Console
+/index.html /  301

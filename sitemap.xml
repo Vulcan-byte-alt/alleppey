@@ -8,7 +8,7 @@
     <!-- Main Homepage -->
     <url>
         <loc>https://alleppeyhomes.com/</loc>
-        <lastmod>2025-10-25</lastmod>
+        <lastmod>2026-05-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <image:image>
@@ -65,7 +65,7 @@
     <!-- Homestay Page -->
     <url>
         <loc>https://alleppeyhomes.com/homestay.html</loc>
-        <lastmod>2025-10-25</lastmod>
+        <lastmod>2026-05-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
         <image:image>
@@ -108,9 +108,14 @@
     <!-- Houseboat Page -->
     <url>
         <loc>https://alleppeyhomes.com/houseboat.html</loc>
-        <lastmod>2025-10-25</lastmod>
+        <lastmod>2026-05-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://alleppeyhomes.com/houseboat_hero.jpg</image:loc>
+            <image:title>Houseboat in Alleppey - Kerala Backwater Cruise 2026</image:title>
+            <image:caption>Traditional Kettuvallam houseboat cruising the Alappuzha backwaters</image:caption>
+        </image:image>
         <image:image>
             <image:loc>https://alleppeyhomes.com/houseboat.jpg</image:loc>
             <image:title>Luxury Houseboat Experience - Alleppey Homes</image:title>
@@ -122,62 +127,77 @@
             <image:caption>Deluxe category houseboat with premium amenities</image:caption>
         </image:image>
         <image:image>
+            <image:loc>https://alleppeyhomes.com/premium.jpg</image:loc>
+            <image:title>Premium Houseboat - Alleppey Kerala</image:title>
+            <image:caption>Premium glass-covered houseboat for overnight stay in Alappuzha</image:caption>
+        </image:image>
+        <image:image>
             <image:loc>https://alleppeyhomes.com/luxury.png</image:loc>
             <image:title>Luxury Houseboat - Premium Kerala Experience</image:title>
-            <image:caption>Luxury houseboat with air conditioning and modern facilities</image:caption>
+            <image:caption>Luxury houseboat with full air conditioning and modern facilities</image:caption>
         </image:image>
         <image:image>
             <image:loc>https://alleppeyhomes.com/houseboat/pic1.png</image:loc>
-            <image:title>Houseboat Interior - Alleppey</image:title>
-            <image:caption>Beautiful interior of traditional Kerala houseboat</image:caption>
+            <image:title>Traditional Kettuvallam Houseboat for Booking in Alleppey</image:title>
+            <image:caption>Authentic kettuvallam houseboat design on Kerala backwaters</image:caption>
         </image:image>
         <image:image>
             <image:loc>https://alleppeyhomes.com/houseboat/pic2.png</image:loc>
-            <image:title>Houseboat Deck View - Backwaters</image:title>
-            <image:caption>Scenic deck view from our houseboat cruise</image:caption>
+            <image:title>Houseboat Cruising on Alappuzha Backwaters</image:title>
+            <image:caption>Peaceful houseboat journey through the Alleppey waterways</image:caption>
         </image:image>
         <image:image>
             <image:loc>https://alleppeyhomes.com/houseboat/pic3.png</image:loc>
-            <image:title>Houseboat Bedroom - Alleppey</image:title>
-            <image:caption>Comfortable bedroom in our luxury houseboat</image:caption>
+            <image:title>Spacious Living Area Inside Alleppey Houseboat</image:title>
+            <image:caption>Relax and enjoy panoramic backwater views from onboard</image:caption>
         </image:image>
         <image:image>
             <image:loc>https://alleppeyhomes.com/houseboat/pic4.png</image:loc>
-            <image:title>Houseboat Dining Area</image:title>
-            <image:caption>Dining area with Kerala traditional food service</image:caption>
+            <image:title>Comfortable Bedroom in Luxury Houseboat Kerala</image:title>
+            <image:caption>Cozy sleeping quarters with water views in our houseboat</image:caption>
         </image:image>
         <image:image>
             <image:loc>https://alleppeyhomes.com/houseboat/pic5.png</image:loc>
-            <image:title>Houseboat Cruise Scenery - Kerala</image:title>
-            <image:caption>Stunning backwater scenery during houseboat cruise</image:caption>
+            <image:title>Outdoor Dining on Houseboat Deck in Alleppey</image:title>
+            <image:caption>Al fresco meals served on the deck during backwater cruise</image:caption>
         </image:image>
         <image:image>
             <image:loc>https://alleppeyhomes.com/houseboat/pic6.png</image:loc>
-            <image:title>Traditional Kettuvallam Houseboat</image:title>
-            <image:caption>Authentic Kerala kettuvallam houseboat design</image:caption>
+            <image:title>Fresh Seafood Cuisine on Kerala Backwater Cruise</image:title>
+            <image:caption>Local delicacies and seafood prepared fresh onboard</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://alleppeyhomes.com/houseboat/pic7.png</image:loc>
+            <image:title>Sunrise over Kerala Backwaters from Houseboat</image:title>
+            <image:caption>Golden hour sunrise over the Alleppey backwaters</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://alleppeyhomes.com/houseboat/pic8.png</image:loc>
+            <image:title>Sunset View from Alleppey Houseboat</image:title>
+            <image:caption>Spectacular evening colours reflecting on the calm backwaters</image:caption>
         </image:image>
     </url>
 
-    <!-- Privacy Policy Page -->
+    <!-- Packages Page -->
     <url>
-        <loc>https://alleppeyhomes.com/privacy-policy.html</loc>
-        <lastmod>2025-10-25</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
+        <loc>https://alleppeyhomes.com/packages.html</loc>
+        <lastmod>2026-05-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
     </url>
 
-    <!-- Terms & Conditions Page -->
+    <!-- Gallery Page -->
     <url>
-        <loc>https://alleppeyhomes.com/terms.html</loc>
-        <lastmod>2025-10-25</lastmod>
+        <loc>https://alleppeyhomes.com/gallery.html</loc>
+        <lastmod>2026-05-18</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
+        <priority>0.6</priority>
     </url>
 
     <!-- Contact Page -->
     <url>
         <loc>https://alleppeyhomes.com/contact.html</loc>
-        <lastmod>2025-10-25</lastmod>
+        <lastmod>2026-05-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -185,17 +205,41 @@
     <!-- Blog Homepage -->
     <url>
         <loc>https://alleppeyhomes.com/blog.html</loc>
-        <lastmod>2025-10-25</lastmod>
+        <lastmod>2026-05-18</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.7</priority>
     </url>
 
     <!-- Blog Post: Top 10 Things to Do in Alleppey -->
     <url>
         <loc>https://alleppeyhomes.com/blog-top-10-things-alleppey.html</loc>
-        <lastmod>2025-10-25</lastmod>
+        <lastmod>2026-05-18</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- FAQ Page -->
+    <url>
+        <loc>https://alleppeyhomes.com/faq.html</loc>
+        <lastmod>2026-05-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- Privacy Policy -->
+    <url>
+        <loc>https://alleppeyhomes.com/privacy-policy.html</loc>
+        <lastmod>2026-05-18</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <!-- Terms & Conditions -->
+    <url>
+        <loc>https://alleppeyhomes.com/terms.html</loc>
+        <lastmod>2026-05-18</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
     </url>
 
 </urlset>

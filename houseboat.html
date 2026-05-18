@@ -855,6 +855,20 @@
                 class="hero-element delay-3 text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto font-light leading-relaxed drop-shadow-md">
                 Day cruises from ₹7,500 · Overnight stays available · Deluxe, Premium &amp; Luxury Kettuvallam houseboats with all meals — transparent pricing, direct booking
             </p>
+            <div class="hero-element delay-4 mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 flex-wrap">
+                <a id="hero-call-btn-1" href="#" class="inline-flex items-center gap-3 bg-green-500 hover:bg-green-400 text-white font-bold px-7 py-4 rounded-full text-base shadow-lg transition-all duration-300 hover:scale-105">
+                    <i class="fas fa-phone"></i>
+                    <span class="phone-display font-mono"></span>
+                </a>
+                <a id="hero-call-btn-2" href="#" class="inline-flex items-center gap-3 bg-green-500 hover:bg-green-400 text-white font-bold px-7 py-4 rounded-full text-base shadow-lg transition-all duration-300 hover:scale-105">
+                    <i class="fas fa-phone"></i>
+                    <span class="phone-display font-mono"></span>
+                </a>
+                <a href="#gallery" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white font-semibold px-7 py-4 rounded-full text-base transition-all duration-300">
+                    <i class="fas fa-images"></i>
+                    View Gallery
+                </a>
+            </div>
         </div>
     </section>
 
@@ -2990,6 +3004,21 @@
         document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox(); });
 
         console.log('🛥️ Enhanced Houseboat Page loaded successfully!');
+
+        // Phone numbers assembled at runtime — not stored as plaintext in HTML
+        (function() {
+            const phones = [
+                { id: 'hero-call-btn-1', parts: ['+91', '9947', '048197'] },
+                { id: 'hero-call-btn-2', parts: ['+91', '9633', '747715'] }
+            ];
+            phones.forEach(function(p) {
+                const btn = document.getElementById(p.id);
+                if (btn) {
+                    btn.href = 'tel:' + p.parts.join('');
+                    btn.querySelector('.phone-display').textContent = p.parts.join('-');
+                }
+            });
+        })();
     </script>
 </body>
 

@@ -1,373 +1,257 @@
 <!DOCTYPE html>
-<html lang="en" itemscope itemtype="https://schema.org/ImageGallery">
+<html lang="en" class="no-js">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Photo Gallery - Alleppey Homes | Kerala Homestay & Houseboat Pictures</title>
-    <meta name="description" content="Browse our photo gallery showcasing beautiful Alleppey backwaters, traditional Kerala homestay rooms, luxury houseboats, and authentic village life. See why Alleppey Homes is the best choice!">
-    <meta name="keywords" content="Alleppey photos, Kerala homestay pictures, houseboat images, backwaters gallery, Alleppey tourism photos, Kerala travel images, Alappuzha pictures">
-    <meta name="robots" content="index, follow">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0b1411">
+    <title>Alleppey Photo Gallery: Backwaters &amp; Houseboats</title>
+    <meta name="description" content="Browse photos of the Alleppey backwaters, our family homestay rooms and garden, houseboats and Kerala village life, food and culture. Tap to enlarge.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
     <link rel="canonical" href="https://alleppeyhomes.com/gallery.html">
 
-    <!-- Open Graph -->
     <meta property="og:site_name" content="Alleppey Homes">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Photo Gallery - Alleppey Homes">
-    <meta property="og:description" content="Explore beautiful photos of Kerala backwaters, homestay, and houseboat experiences.">
+    <meta property="og:title" content="Alleppey Photo Gallery: Backwaters &amp; Houseboats">
+    <meta property="og:description" content="Browse photos of the Alleppey backwaters, our family homestay rooms and garden, houseboats and Kerala village life, food and culture. Tap to enlarge.">
     <meta property="og:url" content="https://alleppeyhomes.com/gallery.html">
-    <meta property="og:image" content="https://alleppeyhomes.com/gallery1.png">
+    <meta property="og:image" content="https://alleppeyhomes.com/og/gallery1.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_IN">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Alleppey Photo Gallery: Backwaters &amp; Houseboats">
+    <meta name="twitter:description" content="Browse photos of the Alleppey backwaters, our family homestay rooms and garden, houseboats and Kerala village life, food and culture. Tap to enlarge.">
+    <meta name="twitter:image" content="https://alleppeyhomes.com/og/gallery1.jpg">
 
-    <link rel="icon" href="logo.png" type="image/x-icon">
-    <meta name="theme-color" content="#00ff88">
+    <meta name="geo.region" content="IN-KL">
+    <meta name="geo.placename" content="Alappuzha (Alleppey), Kerala">
+    <meta name="geo.position" content="9.4981;76.3388">
+    <meta name="ICBM" content="9.4981, 76.3388">
 
-    <!-- Google Analytics 4 -->
+    <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>document.documentElement.className = 'js';</script>
+    <link rel="stylesheet" href="ah.css?v=20261037">
+    <script src="contact.js?v=20261037"></script>
+    <script src="ah.js?v=20261037" defer></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4DEB85PM0H"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-4DEB85PM0H');
+        gtag('config', 'G-4DEB85PM0H', { 'anonymize_ip': true });
     </script>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
-            color: white;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        .back-link {
-            display: inline-block;
-            margin: 2rem 0;
-            padding: 0.75rem 1.5rem;
-            background: linear-gradient(135deg, #00ff88, #22c55e);
-            color: #0a0a0a;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-        }
-
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #00ff88, #22c55e);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .subtitle {
-            font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.7);
-            margin-bottom: 3rem;
-        }
-
-        .gallery-section {
-            margin: 4rem 0;
-        }
-
-        .gallery-section h2 {
-            font-size: 2rem;
-            color: #00ff88;
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 12px;
-            border: 1px solid rgba(0, 255, 136, 0.2);
-            transition: all 0.3s ease;
-            aspect-ratio: 4/3;
-            background: rgba(255, 255, 255, 0.05);
-        }
-
-        .gallery-item:hover {
-            transform: translateY(-5px);
-            border-color: rgba(0, 255, 136, 0.5);
-            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-
-        .gallery-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
-            padding: 2rem 1rem 1rem;
-            transform: translateY(100%);
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-item:hover .gallery-caption {
-            transform: translateY(0);
-        }
-
-        .gallery-caption h3 {
-            font-size: 1.1rem;
-            color: #00ff88;
-            margin-bottom: 0.25rem;
-        }
-
-        .gallery-caption p {
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.8);
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-
-            .gallery-grid {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-                gap: 1rem;
-            }
-        }
-    </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ImageGallery",
+  "name": "Alleppey Homes photo gallery",
+  "url": "https://alleppeyhomes.com/gallery.html",
+  "description": "Photos of the Alleppey backwaters, our family homestay, houseboats and Kerala culture."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://alleppeyhomes.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Gallery",
+      "item": "https://alleppeyhomes.com/gallery.html"
+    }
+  ]
+}
+</script>
 </head>
 <body>
-    <div class="container">
-        <a href="/" class="back-link">← Back to Home</a>
+<a class="skip" href="#main">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<defs>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+<symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></symbol>
+<symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+<symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10z"/><path d="M2 21c0-3 1.9-5.5 6-7"/></symbol>
+<symbol id="i-utensils" viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2M7 2v20M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></symbol>
+<symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+<symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></symbol>
+<symbol id="i-snow" viewBox="0 0 24 24"><path d="M12 2v20M4.9 7l14.2 10M4.9 17 19.1 7M9 3l3 2 3-2M9 21l3-2 3 2"/></symbol>
+<symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></symbol>
+<symbol id="i-wave" viewBox="0 0 24 24"><path d="M2 8c2 0 2-2 5-2s3 2 5 2 3-2 5-2 3 2 5 2M2 14c2 0 2-2 5-2s3 2 5 2 3-2 5-2 3 2 5 2M2 20c2 0 2-2 5-2s3 2 5 2 3-2 5-2 3 2 5 2"/></symbol>
+<symbol id="i-instagram" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></symbol>
+<symbol id="i-youtube" viewBox="0 0 24 24"><path d="M22.5 6.4a2.8 2.8 0 0 0-2-2C18.8 4 12 4 12 4s-6.8 0-8.5.4a2.8 2.8 0 0 0-2 2C1 8.1 1 12 1 12s0 3.9.5 5.6a2.8 2.8 0 0 0 2 2C5.2 20 12 20 12 20s6.8 0 8.5-.4a2.8 2.8 0 0 0 2-2c.5-1.7.5-5.6.5-5.6s0-3.9-.5-5.6z"/><path d="m9.7 15 5.8-3-5.8-3z"/></symbol>
+<symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+</defs>
+</svg>
 
-        <h1>Photo Gallery</h1>
-        <p class="subtitle">Experience the beauty of Alleppey backwaters, our homestay, and houseboat through our photo collection</p>
-
-        <!-- Backwaters Gallery -->
-        <div class="gallery-section">
-            <h2>🌊 Alleppey Backwaters</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="gallery1.png" alt="Alleppey Backwaters Scenic View">
-                    <div class="gallery-caption">
-                        <h3>Serene Backwaters</h3>
-                        <p>Pristine beauty of Kerala backwaters</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="gallery2.png" alt="Traditional Houseboat on Backwaters">
-                    <div class="gallery-caption">
-                        <h3>Traditional Houseboat</h3>
-                        <p>Luxury cruise through backwaters</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="gallery6.png" alt="Sunset on Alleppey Backwaters">
-                    <div class="gallery-caption">
-                        <h3>Magical Sunset</h3>
-                        <p>Breathtaking backwater sunsets</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="backwater.png" alt="Pristine Backwater Beauty">
-                    <div class="gallery-caption">
-                        <h3>Natural Beauty</h3>
-                        <p>Untouched backwater landscapes</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Homestay Gallery -->
-        <div class="gallery-section">
-            <h2>🏠 Our Homestay</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="home.jpg" alt="Alleppey Homes Exterior">
-                    <div class="gallery-caption">
-                        <h3>Our Homestay</h3>
-                        <p>Traditional Kerala architecture</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="bedroom.jpg" alt="Comfortable Bedroom">
-                    <div class="gallery-caption">
-                        <h3>Comfortable Rooms</h3>
-                        <p>Clean, modern amenities</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="guestroom.jpg" alt="Guest Room">
-                    <div class="gallery-caption">
-                        <h3>Guest Rooms</h3>
-                        <p>Cozy and well-appointed</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="livingroom.jpg" alt="Living Room">
-                    <div class="gallery-caption">
-                        <h3>Common Area</h3>
-                        <p>Relax and socialize</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="bathroom.jpg" alt="Modern Bathroom">
-                    <div class="gallery-caption">
-                        <h3>Clean Bathrooms</h3>
-                        <p>Modern facilities</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="garden.jpg" alt="Garden View">
-                    <div class="gallery-caption">
-                        <h3>Beautiful Garden</h3>
-                        <p>Lush green surroundings</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Houseboat Gallery -->
-        <div class="gallery-section">
-            <h2>⛵ Luxury Houseboats</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="houseboat.jpg" alt="Premium Houseboat">
-                    <div class="gallery-caption">
-                        <h3>Premium Houseboat</h3>
-                        <p>Luxury backwater cruise</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="deluxe.jpg" alt="Deluxe Houseboat">
-                    <div class="gallery-caption">
-                        <h3>Deluxe Category</h3>
-                        <p>Premium amenities</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="luxury.png" alt="Luxury Houseboat">
-                    <div class="gallery-caption">
-                        <h3>Luxury Experience</h3>
-                        <p>AC and modern facilities</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="houseboat/pic1.png" alt="Houseboat Interior">
-                    <div class="gallery-caption">
-                        <h3>Beautiful Interior</h3>
-                        <p>Traditional Kerala design</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="houseboat/pic2.png" alt="Houseboat Deck">
-                    <div class="gallery-caption">
-                        <h3>Spacious Deck</h3>
-                        <p>Enjoy scenic views</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="houseboat/pic3.png" alt="Houseboat Bedroom">
-                    <div class="gallery-caption">
-                        <h3>Comfortable Bedroom</h3>
-                        <p>Sleep in luxury</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="houseboat/pic4.png" alt="Dining Area">
-                    <div class="gallery-caption">
-                        <h3>Dining Area</h3>
-                        <p>Enjoy Kerala cuisine</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="houseboat/pic5.png" alt="Cruise Scenery">
-                    <div class="gallery-caption">
-                        <h3>Stunning Views</h3>
-                        <p>Backwater beauty</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="houseboat/pic6.png" alt="Traditional Kettuvallam">
-                    <div class="gallery-caption">
-                        <h3>Kettuvallam</h3>
-                        <p>Authentic design</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Kerala Culture -->
-        <div class="gallery-section">
-            <h2>🌴 Kerala Culture & Food</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="gallery3.jpg" alt="Traditional Kerala Home">
-                    <div class="gallery-caption">
-                        <h3>Kerala Heritage</h3>
-                        <p>Traditional architecture</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="gallery4.png" alt="Village Life">
-                    <div class="gallery-caption">
-                        <h3>Village Life</h3>
-                        <p>Authentic experiences</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="gallery5.png" alt="Traditional Kerala Food">
-                    <div class="gallery-caption">
-                        <h3>Kerala Cuisine</h3>
-                        <p>Home-cooked meals</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="about.jpg" alt="About Our Family">
-                    <div class="gallery-caption">
-                        <h3>Our Story</h3>
-                        <p>Family-run hospitality</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div style="text-align: center; margin: 4rem 0; padding: 3rem; background: rgba(0,255,136,0.1); border-radius: 16px; border: 1px solid rgba(0,255,136,0.3);">
-            <h2 style="color: #00ff88; margin-bottom: 1rem;">Ready to Experience This Beauty?</h2>
-            <p style="color: rgba(255,255,255,0.8); margin-bottom: 2rem; font-size: 1.1rem;">
-                Book your stay at Alleppey Homes and create your own memories in Kerala's backwaters
-            </p>
-            <a href="tel:+919946021397" style="padding: 1rem 2rem; background: linear-gradient(135deg, #00ff88, #22c55e); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600; display: inline-block;">Book Now</a>
-        </div>
-
-        <p style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
-            <a href="/" style="color: #00ff88; text-decoration: none;">← Return to Homepage</a> |
-            <a href="/homestay.html" style="color: #00ff88; text-decoration: none;">Homestay</a> |
-            <a href="/houseboat.html" style="color: #00ff88; text-decoration: none;">Houseboat</a> |
-            <a href="/packages.html" style="color: #00ff88; text-decoration: none;">Packages</a>
-        </p>
+<header class="nav" id="nav">
+    <div class="nav__bar">
+        <a class="nav__brand" href="index.html" aria-label="Alleppey Homes home">
+            <img src="logo.webp" alt="" width="40" height="33"><span>Alleppey Homes</span>
+        </a>
+        <nav class="nav__links" aria-label="Main">
+            <a href="index.html" >Home</a>
+            <a href="houseboat.html" >Houseboats</a>
+            <a href="homestay.html" >Homestay</a>
+            <a href="packages.html" >Packages</a>
+            <a href="blog.html" >Stories</a>
+            <a href="contact.html" >Contact</a>
+        </nav>
+        <button class="btn btn--primary nav__cta" type="button" data-open-contact>Book now</button>
+        <button class="nav__toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="sheet">
+            <span></span><span></span>
+        </button>
     </div>
+</header>
+<div class="sheet" id="sheet" hidden>
+    <nav aria-label="Mobile">
+        <a href="index.html">Home</a>
+        <a href="houseboat.html">Houseboats</a>
+        <a href="homestay.html">Homestay</a>
+        <a href="packages.html">Packages</a>
+        <a href="blog.html">Stories</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="sheet__cta">
+        <a class="btn btn--primary" href="contact.html" data-call="1">Call us</a>
+        <a class="btn btn--glass" href="contact.html" data-wa="1" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+</div>
+<main id="main">
+
+<section class="hero hero--short" style="min-height:min(60svh,30rem)">
+    <div class="hero__media"><img src="gallery1-640.webp" srcset="gallery1-640.webp 640w, gallery1.webp 768w" sizes="100vw" width="640" height="960" alt="Sunrise over the Alappuzha backwaters" fetchpriority="high" decoding="async"></div>
+    <div class="wrap">
+        <div class="hero__content">
+            <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> / <span>Gallery</span></nav>
+            <span class="eyebrow">Photo gallery</span>
+            <h1>Alleppey backwaters, homestay &amp; houseboats</h1>
+            <p class="lead">A look at the water, our family home and the boats. Tap any photo to enlarge it.</p>
+        </div>
+    </div>
+</section>
+<section class="section--tight">
+    <div class="wrap">
+        <div class="head" data-reveal><span class="eyebrow">Alleppey backwaters</span><h2>Water, light and palms</h2></div>
+        <div class="masonry" data-reveal><a href="gallery1.webp"><img src="gallery1-640.webp" width="640" height="960" alt="Sunrise light over the Alappuzha backwaters" loading="lazy" decoding="async"></a><a href="gallery6.webp"><img src="gallery6-640.webp" width="640" height="427" alt="Sunset on the Alleppey backwaters" loading="lazy" decoding="async"></a><a href="backwater.webp"><img src="backwater-640.webp" width="640" height="427" alt="Calm backwater canal near Alleppey" loading="lazy" decoding="async"></a><a href="gallery4.webp"><img src="gallery4-640.webp" width="640" height="960" alt="Village life along the Alappuzha backwaters" loading="lazy" decoding="async"></a><a href="testimonial.webp"><img src="testimonial-640.webp" width="640" height="349" alt="Golden evening over a houseboat on the lake" loading="lazy" decoding="async"></a><a href="houseboat/pic9.webp"><img src="houseboat/pic9-640.webp" width="640" height="640" alt="Fiery sunset reflected on Kerala backwaters" loading="lazy" decoding="async"></a><a href="houseboat/pic8.webp"><img src="houseboat/pic8-640.webp" width="640" height="960" alt="Sun rising over coconut palms from a houseboat deck" loading="lazy" decoding="async"></a><a href="houseboat/pic11.webp"><img src="houseboat/pic11-640.webp" width="640" height="960" alt="Canal lined with coconut palms in Kuttanad" loading="lazy" decoding="async"></a><a href="houseboat/pic10.webp"><img src="houseboat/pic10-640.webp" width="640" height="427" alt="Traditional village houses on a backwater canal" loading="lazy" decoding="async"></a></div>
+    </div>
+</section>
+<section class="section--tight">
+    <div class="wrap">
+        <div class="head" data-reveal><span class="eyebrow">Our homestay</span><h2>Home, as we keep it</h2></div>
+        <div class="masonry" data-reveal><a href="homestay-exterior-alleppey.webp"><img src="homestay-exterior-alleppey-640.webp" width="640" height="480" alt="Front of our family homestay in Alleppey" loading="lazy" decoding="async"></a><a href="home.webp"><img src="home-640.webp" width="640" height="479" alt="Our family homestay in Alappuzha" loading="lazy" decoding="async"></a><a href="homestay-bedroom-alleppey.webp"><img src="homestay-bedroom-alleppey-640.webp" width="640" height="480" alt="Double bedroom at the homestay" loading="lazy" decoding="async"></a><a href="bedroom.webp"><img src="bedroom-640.webp" width="640" height="640" alt="Traditional bedroom at our Alleppey homestay" loading="lazy" decoding="async"></a><a href="guestroom.webp"><img src="guestroom-640.webp" width="640" height="480" alt="Guest room at the homestay" loading="lazy" decoding="async"></a><a href="livingroom.webp"><img src="livingroom-640.webp" width="640" height="698" alt="Living room at the homestay" loading="lazy" decoding="async"></a><a href="bathroom.webp"><img src="bathroom-640.webp" width="640" height="480" alt="Clean modern bathroom" loading="lazy" decoding="async"></a><a href="garden.webp"><img src="garden-640.webp" width="640" height="480" alt="Garden at our homestay" loading="lazy" decoding="async"></a><a href="parking.webp"><img src="parking-640.webp" width="640" height="480" alt="Secure parking at the homestay" loading="lazy" decoding="async"></a><a href="gallery3.webp"><img src="gallery3-640.webp" width="640" height="480" alt="Traditional Kerala home architecture" loading="lazy" decoding="async"></a><a href="about.webp"><img src="about-640.webp" width="640" height="480" alt="Quiet canal near our homestay" loading="lazy" decoding="async"></a></div>
+    </div>
+</section>
+<section class="section--tight">
+    <div class="wrap">
+        <div class="head" data-reveal><span class="eyebrow">Houseboats</span><h2>Afloat at dusk</h2></div>
+        <div class="masonry" data-reveal><a href="houseboat.webp"><img src="houseboat-640.webp" width="640" height="428" alt="Traditional kettuvallam houseboat in Alleppey" loading="lazy" decoding="async"></a><a href="premium.webp"><img src="premium-640.webp" width="640" height="426" alt="Premium houseboat on open water" loading="lazy" decoding="async"></a><a href="deluxe.webp"><img src="deluxe-640.webp" width="640" height="427" alt="Deluxe houseboat category" loading="lazy" decoding="async"></a><a href="luxury.webp"><img src="luxury-640.webp" width="640" height="426" alt="Luxury houseboat on the backwaters" loading="lazy" decoding="async"></a><a href="gallery2.webp"><img src="gallery2-640.webp" width="640" height="960" alt="Houseboat available for booking in Alleppey" loading="lazy" decoding="async"></a><a href="night_houseboat.webp"><img src="night_houseboat-640.webp" width="640" height="427" alt="Houseboat lit up at night" loading="lazy" decoding="async"></a><a href="houseboat_hero.webp"><img src="houseboat_hero-640.webp" width="640" height="480" alt="Houseboat cruising at golden hour" loading="lazy" decoding="async"></a><a href="houseboat/pic1.webp"><img src="houseboat/pic1-640.webp" width="640" height="640" alt="Houseboat interior" loading="lazy" decoding="async"></a><a href="houseboat/pic2.webp"><img src="houseboat/pic2-640.webp" width="640" height="427" alt="Houseboat deck" loading="lazy" decoding="async"></a><a href="houseboat/pic3.webp"><img src="houseboat/pic3-640.webp" width="640" height="427" alt="Houseboat bedroom" loading="lazy" decoding="async"></a><a href="houseboat/pic4.webp"><img src="houseboat/pic4-640.webp" width="640" height="427" alt="Houseboat dining area" loading="lazy" decoding="async"></a><a href="houseboat/pic5.webp"><img src="houseboat/pic5-640.webp" width="640" height="427" alt="Cruise scenery from a houseboat" loading="lazy" decoding="async"></a><a href="houseboat/pic6.webp"><img src="houseboat/pic6-640.webp" width="640" height="640" alt="Traditional kettuvallam houseboat" loading="lazy" decoding="async"></a><a href="houseboat/pic7.webp"><img src="houseboat/pic7-640.webp" width="640" height="640" alt="Candlelit dinner on a houseboat deck at sunset" loading="lazy" decoding="async"></a></div>
+    </div>
+</section>
+<section class="section--tight">
+    <div class="wrap">
+        <div class="head" data-reveal><span class="eyebrow">Kerala culture, food &amp; wildlife</span><h2>Markets, meals and birdsong</h2></div>
+        <div class="masonry" data-reveal><a href="gallery5.webp"><img src="gallery5-640.webp" width="640" height="427" alt="Traditional Kerala meal served on a banana leaf" loading="lazy" decoding="async"></a><a href="market.webp"><img src="market-640.webp" width="640" height="427" alt="Spice and fruit market in Kerala" loading="lazy" decoding="async"></a><a href="theyyam.webp"><img src="theyyam-640.webp" width="640" height="960" alt="Theyyam performer in traditional costume" loading="lazy" decoding="async"></a><a href="houseboat/pic12.webp"><img src="houseboat/pic12-640.webp" width="640" height="427" alt="Chinese fishing nets at sunset in Kerala" loading="lazy" decoding="async"></a><a href="wildlife.webp"><img src="wildlife-640.webp" width="640" height="960" alt="Kingfisher on a branch over the backwaters" loading="lazy" decoding="async"></a><a href="houseboat/pic13.webp"><img src="houseboat/pic13-640.webp" width="640" height="960" alt="Kingfishers and egrets on the backwaters" loading="lazy" decoding="async"></a><a href="houseboat/pic14.webp"><img src="houseboat/pic14-640.webp" width="640" height="427" alt="Photographing the backwaters from a houseboat" loading="lazy" decoding="async"></a></div>
+    </div>
+</section>
+
+<section>
+    <div class="wrap">
+        <div class="cta" data-reveal>
+            <h2>Come and see it yourself</h2>
+            <p>Come and stay. We will help you plan the homestay, the houseboat or both.</p>
+            <div class="btn-row">
+                <button class="btn btn--primary" type="button" data-open-contact>Plan your stay</button>
+                <a class="btn btn--glass" href="contact.html">Send an enquiry</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+<footer class="footer">
+    <div class="wrap footer__grid">
+        <div class="footer__brand">
+            <a class="nav__brand" href="index.html"><img src="logo.webp" alt="" width="40" height="33" loading="lazy"><span>Alleppey Homes</span></a>
+            <p>A family-run homestay and houseboat host in the Alappuzha backwaters. Slow mornings, home-cooked Kerala food and quiet water.</p>
+            <div class="footer__social">
+                <a href="https://www.instagram.com/alleppey_homes_/" aria-label="Instagram" rel="noopener"><svg class="i"><use href="#i-instagram"/></svg></a>
+                <a href="https://www.youtube.com/channel/UC6WuM9vWr9iR7FOfyq1xXtg" aria-label="YouTube" rel="noopener"><svg class="i"><use href="#i-youtube"/></svg></a>
+                <a href="contact.html" data-wa="1" aria-label="WhatsApp" target="_blank" rel="noopener"><svg class="i"><use href="#i-chat"/></svg></a>
+            </div>
+        </div>
+        <div>
+            <h4>Stay &amp; cruise</h4>
+            <ul>
+                <li><a href="houseboat.html">Houseboat in Alleppey</a></li>
+                <li><a href="houseboat-price-alleppey.html">Houseboat price</a></li>
+                <li><a href="luxury-houseboat-alleppey.html">Luxury houseboat</a></li>
+                <li><a href="ac-houseboat-alleppey.html">AC houseboat</a></li>
+                <li><a href="honeymoon-houseboat-alleppey.html">Honeymoon houseboat</a></li>
+                <li><a href="homestay.html">Homestay in Alleppey</a></li>
+                <li><a href="packages.html">Packages</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Plan your trip</h4>
+            <ul>
+                <li><a href="blog.html">Travel stories</a></li>
+                <li><a href="blog-best-time-alleppey-houseboat.html">Best time to visit</a></li>
+                <li><a href="blog-top-10-things-alleppey.html">Things to do</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Find us</h4>
+            <address>
+                Darul Hamdu, Avulukunnu P.O.<br>South Aryad, Alappuzha 688006<br>Kerala, India
+            </address>
+            <p><a href="mailto:homesalleppey@gmail.com">homesalleppey@gmail.com</a></p>
+            <p><a href="contact.html">Phone &amp; WhatsApp</a></p>
+        </div>
+    </div>
+    <div class="wrap footer__legal">
+        <span>&copy; 2026 Alleppey Homes</span>
+        <span class="footer__note">Images are for illustration only. Rooms, boats and menus can vary by plan and season.</span>
+        <span><a href="privacy-policy.html">Privacy</a> &middot; <a href="terms.html">Terms</a></span>
+    </div>
+</footer>
+
+<nav class="dock" id="dock" aria-label="Quick contact">
+    <a href="contact.html" data-call="1"><svg class="i"><use href="#i-phone"/></svg>Call</a>
+    <a href="contact.html" data-wa="1" target="_blank" rel="noopener"><svg class="i"><use href="#i-chat"/></svg>WhatsApp</a>
+    <button class="primary" type="button" data-open-contact>Book</button>
+</nav>
+
+<dialog class="modal" id="contact-modal" aria-labelledby="contact-title">
+    <form method="dialog" class="modal__panel">
+        <button class="modal__close" aria-label="Close" value="close"><svg class="i"><use href="#i-x"/></svg></button>
+        <h2 id="contact-title">Talk to us</h2>
+        <p>Call or message us on WhatsApp. We reply personally, usually within the hour.</p>
+        <div class="modal__list" id="contact-modal-numbers"></div>
+        <a class="btn btn--glass" href="contact.html">Send an enquiry instead</a>
+    </form>
+</dialog>
 </body>
 </html>

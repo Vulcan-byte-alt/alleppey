@@ -1,0 +1,359 @@
+{
+ "about.jpg": {
+  "w": 1599,
+  "h": 1200,
+  "small": 640,
+  "before": 758859,
+  "after": 455474
+ },
+ "backwater.png": {
+  "w": 1536,
+  "h": 1024,
+  "small": 640,
+  "before": 1849686,
+  "after": 104660
+ },
+ "bathroom.jpg": {
+  "w": 1600,
+  "h": 1200,
+  "small": 640,
+  "before": 231671,
+  "after": 84668
+ },
+ "bedroom.jpg": {
+  "w": 1080,
+  "h": 810,
+  "small": 640,
+  "before": 203451,
+  "after": 48882
+ },
+ "bedroom.png": {
+  "w": 1024,
+  "h": 1024,
+  "small": 640,
+  "before": 1287178,
+  "after": 48882
+ },
+ "deluxe.jpg": {
+  "w": 1024,
+  "h": 683,
+  "small": 640,
+  "before": 180748,
+  "after": 109056
+ },
+ "gallery1.png": {
+  "w": 1024,
+  "h": 1536,
+  "small": 640,
+  "before": 3278967,
+  "after": 387476
+ },
+ "gallery2.png": {
+  "w": 1024,
+  "h": 1536,
+  "small": 640,
+  "before": 2641228,
+  "after": 235480
+ },
+ "gallery3.jpg": {
+  "w": 1599,
+  "h": 1200,
+  "small": 640,
+  "before": 708870,
+  "after": 446508
+ },
+ "gallery4.png": {
+  "w": 1024,
+  "h": 1536,
+  "small": 640,
+  "before": 2684725,
+  "after": 232390
+ },
+ "gallery5.png": {
+  "w": 1536,
+  "h": 1024,
+  "small": 640,
+  "before": 2603693,
+  "after": 211728
+ },
+ "gallery6.png": {
+  "w": 1536,
+  "h": 1024,
+  "small": 640,
+  "before": 2268242,
+  "after": 151012
+ },
+ "garden.jpg": {
+  "w": 1599,
+  "h": 1200,
+  "small": 640,
+  "before": 749784,
+  "after": 459502
+ },
+ "guestroom.jpg": {
+  "w": 1600,
+  "h": 1200,
+  "small": 640,
+  "before": 267009,
+  "after": 106882
+ },
+ "hero.png": {
+  "w": 1408,
+  "h": 768,
+  "small": 640,
+  "before": 1526186,
+  "after": 90566
+ },
+ "home.jpg": {
+  "w": 720,
+  "h": 539,
+  "small": 640,
+  "before": 121223,
+  "after": 67168
+ },
+ "homestay-bedroom-alleppey.jpg": {
+  "w": 1600,
+  "h": 1200,
+  "small": 640,
+  "before": 247914,
+  "after": 93618
+ },
+ "homestay-exterior-alleppey.jpg": {
+  "w": 1600,
+  "h": 1200,
+  "small": 640,
+  "before": 589856,
+  "after": 330170
+ },
+ "houseboat.jpg": {
+  "w": 1600,
+  "h": 1071,
+  "small": 640,
+  "before": 1952391,
+  "after": 268958
+ },
+ "houseboat_hero.jpg": {
+  "w": 1200,
+  "h": 900,
+  "small": 640,
+  "before": 504018,
+  "after": 245106
+ },
+ "livingroom.jpg": {
+  "w": 1230,
+  "h": 1341,
+  "small": 640,
+  "before": 238823,
+  "after": 92358
+ },
+ "logo.png": {
+  "w": 320,
+  "h": 261,
+  "small": null,
+  "before": 101560,
+  "after": 37700
+ },
+ "luxury.png": {
+  "w": 809,
+  "h": 538,
+  "small": 640,
+  "before": 610389,
+  "after": 53776
+ },
+ "market.png": {
+  "w": 1536,
+  "h": 1024,
+  "small": 640,
+  "before": 2496184,
+  "after": 193040
+ },
+ "meera.png": {
+  "w": 1024,
+  "h": 1261,
+  "small": 640,
+  "before": 2419922,
+  "after": 121968
+ },
+ "mike.png": {
+  "w": 1024,
+  "h": 1063,
+  "small": 640,
+  "before": 1906532,
+  "after": 70136
+ },
+ "night_houseboat.png": {
+  "w": 1536,
+  "h": 1024,
+  "small": 640,
+  "before": 2196575,
+  "after": 147418
+ },
+ "parking.jpg": {
+  "w": 1599,
+  "h": 1200,
+  "small": 640,
+  "before": 735554,
+  "after": 458338
+ },
+ "premium.jpg": {
+  "w": 1024,
+  "h": 682,
+  "small": 640,
+  "before": 160108,
+  "after": 66976
+ },
+ "priya.png": {
+  "w": 1024,
+  "h": 1165,
+  "small": 640,
+  "before": 2117263,
+  "after": 60980
+ },
+ "sarah.png": {
+  "w": 1024,
+  "h": 1154,
+  "small": 640,
+  "before": 2092520,
+  "after": 79154
+ },
+ "testimonial.png": {
+  "w": 1408,
+  "h": 768,
+  "small": 640,
+  "before": 1531557,
+  "after": 97908
+ },
+ "testimonial1.png": {
+  "w": 1024,
+  "h": 1024,
+  "small": 640,
+  "before": 1462451,
+  "after": 53744
+ },
+ "testimonial2.png": {
+  "w": 1024,
+  "h": 1024,
+  "small": 640,
+  "before": 1365567,
+  "after": 55528
+ },
+ "testimonial3.png": {
+  "w": 1024,
+  "h": 1024,
+  "small": 640,
+  "before": 1355027,
+  "after": 35440
+ },
+ "theyyam.png": {
+  "w": 1024,
+  "h": 1536,
+  "small": 640,
+  "before": 2157108,
+  "after": 125266
+ },
+ "wildlife.png": {
+  "w": 1024,
+  "h": 1536,
+  "small": 640,
+  "before": 1892208,
+  "after": 79030
+ },
+ "houseboat/pic1.png": {
+  "w": 1024,
+  "h": 1024,
+  "small": 640,
+  "before": 2029841,
+  "after": 209824
+ },
+ "houseboat/pic10.png": {
+  "w": 1536,
+  "h": 1024,
+  "small": 640,
+  "before": 3183346,
+  "after": 355546
+ },
+ "houseboat/pic11.png": {
+  "w": 1024,
+  "h": 1536,
+  "small": 640,
+  "before": 3261278,
+  "after": 376726
+ },
+ "houseboat/pic12.png": {
+  "w": 1536,
+  "h": 1024,
+  "small": 640,
+  "before": 2253075,
+  "after": 179184
+ },
+ "houseboat/pic13.png": {
+  "w": 1024,
+  "h": 1536,
+  "small": 640,
+  "before": 2352074,
+  "after": 169362
+ },
+ "houseboat/pic14.png": {
+  "w": 1536,
+  "h": 1024,
+  "small": 640,
+  "before": 2263291,
+  "after": 83036
+ },
+ "houseboat/pic2.png": {
+  "w": 1536,
+  "h": 1024,
+  "small": 640,
+  "before": 2247618,
+  "after": 146556
+ },
+ "houseboat/pic3.png": {
+  "w": 1536,
+  "h": 1024,
+  "small": 640,
+  "before": 2707355,
+  "after": 258666
+ },
+ "houseboat/pic4.png": {
+  "w": 1536,
+  "h": 1024,
+  "small": 640,
+  "before": 2611476,
+  "after": 157274
+ },
+ "houseboat/pic5.png": {
+  "w": 1536,
+  "h": 1024,
+  "small": 640,
+  "before": 3084931,
+  "after": 280842
+ },
+ "houseboat/pic6.png": {
+  "w": 1254,
+  "h": 1254,
+  "small": 640,
+  "before": 2784202,
+  "after": 240950
+ },
+ "houseboat/pic7.png": {
+  "w": 1254,
+  "h": 1254,
+  "small": 640,
+  "before": 2121957,
+  "after": 131710
+ },
+ "houseboat/pic8.png": {
+  "w": 1024,
+  "h": 1536,
+  "small": 640,
+  "before": 2201075,
+  "after": 85008
+ },
+ "houseboat/pic9.png": {
+  "w": 1254,
+  "h": 1254,
+  "small": 640,
+  "before": 2218128,
+  "after": 159674
+ }
+}

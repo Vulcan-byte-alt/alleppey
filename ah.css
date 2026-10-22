@@ -147,7 +147,7 @@ section { padding-block: var(--space-section); }
 .btn--text { padding-inline: .25rem; color: var(--accent); }
 .btn--sm { min-height: 40px; padding: 0 1.1rem; font-size: .92rem; }
 .btn-row { display: flex; flex-wrap: wrap; gap: .85rem; }
-.center .btn-row, .head--center .btn-row { justify-content: center; }
+.center .btn-row, .head--center .btn-row, .cta .btn-row { justify-content: center; align-items: center; }
 
 /* ---------- Hero ---------- */
 .hero { position: relative; min-height: 100vh; min-height: 100svh; display: flex; align-items: flex-end; padding: calc(7rem + var(--safe-t)) 0 clamp(3rem, 9vw, 5.5rem); overflow: hidden; isolation: isolate; }

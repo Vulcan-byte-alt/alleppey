@@ -182,7 +182,19 @@ a.card:hover { text-decoration: none; transform: translateY(-4px); background: v
 .card--media .card__body { padding: clamp(1.25rem, 3.5vw, 1.75rem); display: flex; flex-direction: column; flex: 1; }
 .card--media .card__body .btn { margin-top: auto; align-self: flex-start; }
 .card--media .card__body p { flex: 0 0 auto; }
-.card__more { margin-top: auto; padding-top: 1.25rem; display: inline-flex; align-items: center; gap: .4rem; font-weight: 600; color: var(--accent); }
+.card__more {
+  align-self: flex-start; margin-top: auto; display: inline-flex; align-items: center; gap: .55rem; min-height: 44px; padding: 0 .5rem 0 1.15rem;
+  border-radius: 999px; font-size: .92rem; font-weight: 600; line-height: 1; color: var(--ink);
+  background: rgba(155, 216, 184, .12); border: 1px solid rgba(155, 216, 184, .3); box-shadow: var(--hi);
+  transition: background .3s var(--ease), border-color .3s var(--ease), transform .3s var(--ease);
+}
+.card__more .i { box-sizing: content-box; width: 1rem; height: 1rem; padding: .35rem; border-radius: 50%; background: rgba(155, 216, 184, .9); color: var(--accent-ink); transition: transform .3s var(--ease); }
+a.card:hover .card__more { background: rgba(155, 216, 184, .2); border-color: rgba(155, 216, 184, .5); }
+a.card:hover .card__more .i { transform: translateX(3px); }
+a.card:not(.card--media) { display: flex; flex-direction: column; }
+.card p:has(+ .card__more) { margin-bottom: 1.35rem; }
+.card--media .card__body .card__more { margin-top: auto; }
+.card--media .card__body p:has(+ .card__more) { margin-bottom: 1.35rem; }
 .chip { display: inline-flex; align-items: center; gap: .6rem; padding: .35rem 1rem .35rem .4rem; border-radius: 999px; font-size: .9rem; font-weight: 600; color: var(--ink); background: rgba(255, 255, 255, .09); border: 1px solid rgba(255, 255, 255, .12); box-shadow: var(--hi); -webkit-backdrop-filter: blur(16px) saturate(160%); backdrop-filter: blur(16px) saturate(160%); }
 .chip .i { box-sizing: content-box; width: 1rem; height: 1rem; padding: .4rem; border-radius: 50%; background: rgba(155, 216, 184, .16); color: var(--accent); }
 .tag { display: flex; width: fit-content; align-items: center; margin-bottom: 1rem; padding: .3rem .8rem; border-radius: 999px; font-size: .72rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; line-height: 1.2; color: var(--gold); background: rgba(233, 214, 168, .12); }

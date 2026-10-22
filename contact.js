@@ -10,7 +10,7 @@
   var pretty = function (i) { return P[i][0] + ' ' + P[i][1] + ' ' + P[i][2]; };
 
   window.AHContact = {
-    modal: function () { return [P[1], P[2], P[0]]; },
+    modal: function () { return [P[0], P[1], P[2]]; },
     hydrate: function (root) { fill(root || document); }
   };
 
@@ -37,7 +37,7 @@
       '@id': 'https://alleppeyhomes.com/#phone',
       name: 'Alleppey Homes',
       url: 'https://alleppeyhomes.com/',
-      telephone: [digits(1), digits(2), digits(0)]
+      telephone: [digits(0), digits(1), digits(2)]
     });
     document.head.appendChild(ld);
   }

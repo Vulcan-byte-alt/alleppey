@@ -31,7 +31,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "src" / "pages"
 PARTIALS = ROOT / "partials"
 SITE = "https://alleppeyhomes.com"
-VERSION = "20261039"
+VERSION = "20261041"
 TODAY = datetime.date.today().isoformat()
 NOTES = {
     "boats": (

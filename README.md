@@ -10,6 +10,7 @@ Static site for https://alleppeyhomes.com, served by GitHub Pages (GoDaddy holds
 
 ## Images
 - Put originals in the repo root (or `houseboat/`), then run `python scripts/compress_images.py`. It writes a full-size and a 640px WebP next to each image, plus favicons and `og/` share images.
+- Only the originals the script needs for favicons and `og/` share images are kept in the repo (`logo.png`, `hero.png`, `home.jpg`, `houseboat.jpg`, `houseboat_hero.jpg`, `gallery1.png`, `gallery3.jpg`). Other originals were deleted once their `.webp` existed; they are still in git history if you ever need them.
 - Use the `.webp` files in pages, with `width`, `height`, `alt` and `loading="lazy"` (not on the hero image).
 
 ## Phone numbers
